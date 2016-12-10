@@ -1,0 +1,17 @@
+
+.large-image-box{
+       -fx-background-color: linear-gradient(#999999,  #cccccc);
+        -fx-border-radius: 20;
+        -fx-background-radius: 20;
+        -fx-padding: 5;
+        -fx-border-style:solid;
+	   /* -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );*/
+	    -fx-alignment: top-center;
+    }
+
+.large-image{
+    -fx-padding: 25px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+    -fx-alignment: top-center;
+}
