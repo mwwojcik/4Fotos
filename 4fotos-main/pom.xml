@@ -48,6 +48,20 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>mw</groupId>
+			<artifactId>4fotos-wspolne</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mw</groupId>
+			<artifactId>4fotos-uslugi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mw</groupId>
+			<artifactId>4fotos-kontrolki</artifactId>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
