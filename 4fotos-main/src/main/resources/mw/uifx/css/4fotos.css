@@ -1,0 +1,24 @@
+.kontrolka{
+	-fx-font: 11px "System";
+}
+
+.przyciski-narzedziowe {
+	-fx-font: 11px "System";
+	-fx-content-display: top;
+	-fx-padding: 32px 32px;
+	-fx-margin-right: 0px; float: left;
+}
+
+.przyciski-narzedziowe-belka {
+	-fx-padding: 5px;
+}
+
+
+
+.drzewo-katalogow {
+	-fx-font: 11px "System";
+	}
+
+.kontener-kryteriow{
+        -fx-alignment: bottom-left;
+}

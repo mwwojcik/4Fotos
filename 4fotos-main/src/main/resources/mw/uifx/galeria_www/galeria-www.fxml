@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ScrollPane?>
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="900.0" prefWidth="900.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.65"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="mw.uifx.kontrolery.galeriawww.GaleriaAplikacjaGlownaKontroler">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="10" vgrow="SOMETIMES"/>
+        <RowConstraints percentHeight="5" vgrow="SOMETIMES"/>
+        <RowConstraints percentHeight="75" vgrow="SOMETIMES"/>
+        <RowConstraints percentHeight="10" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+
+        <HBox>
+            <children>
+                <Button mnemonicParsing="false" text="Generuj" onMouseClicked="#generujGalerieWWWAkcjaKlik" fx:id="importujPrzycisk"
+                        styleClass="przyciski-narzedziowe"/>
+                <Button mnemonicParsing="false" text="Publikuj" styleClass="przyciski-narzedziowe" onMouseClicked="#publikujGalerieWWWAkcjaKlik"/>
+                <Button mnemonicParsing="false" text="Zaczytaj plik" onMouseClicked="#zaczytajPlikAkcjaKlik" styleClass="przyciski-narzedziowe"/>
+                <Button mnemonicParsing="false" text="Zamknij" onMouseClicked="#zamknijAplikacjeAkcjaKlik" styleClass="przyciski-narzedziowe"/>
+            </children>
+        </HBox>
+
+
+        <TitledPane alignment="TOP_LEFT" collapsible="false" contentDisplay="TOP" prefHeight="Infinity"
+                    prefWidth="Infinity" text="Wybór trybu" textOverrun="CLIP" GridPane.halignment="LEFT"
+                    GridPane.rowIndex="1">
+            <content>
+                <fx:include source="../tryb-dzialania-aplikacji.fxml" fx:id="trybDzialaniaAplikacjiWidok"/>
+            </content>
+        </TitledPane>
+
+        <TitledPane alignment="TOP_LEFT" collapsible="false" prefHeight="Infinity" prefWidth="Infinity" text="Zawartość"
+                    textOverrun="CLIP" GridPane.rowIndex="2">
+            <content>
+                <HBox prefHeight="700">
+                    <children>
+                        <TreeView prefHeight="Infinity" prefWidth="250.0" showRoot="true"
+                                  fx:id="drzewoKatalogow" styleClass="drzewo-katalogow"/>
+                        <TabPane prefHeight="Infinity" prefWidth="677.0" tabClosingPolicy="UNAVAILABLE">
+                            <tabs>
+                                <Tab text="Razem" styleClass="kontrolka">
+                                    <content>
+                                        <fx:include source="../zasoby_glowne/zasoby-glowne-podsumowanie-list-plikow.fxml"
+                                                    fx:id="podsumowanieListPlikowWidok"/>
+                                    </content>
+
+                                </Tab>
+                                <Tab text=" JPG " styleClass="kontrolka">
+                                    <content>
+                                       <fx:include source="../zasoby_glowne/zasoby-glowne-lista-plikow-jpg.fxml"
+                                                    fx:id="listaPlikowJPGWidok"/>
+                                    </content>
+                                </Tab>
+
+
+                            </tabs>
+                        </TabPane>
+
+                    </children>
+                </HBox>
+            </content>
+        </TitledPane>
+
+        <TitledPane alignment="TOP_LEFT" collapsible="false" prefWidth="500.0" text="Postęp" textOverrun="CLIP"
+                    GridPane.rowIndex="3">
+            <ProgressBar prefHeight="20" prefWidth="Infinity" progress="0.0"/>
+        </TitledPane>
+
+    </children>
+
+</GridPane>
+

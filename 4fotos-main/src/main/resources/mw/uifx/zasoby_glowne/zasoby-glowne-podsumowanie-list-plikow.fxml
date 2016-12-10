@@ -1,0 +1,13 @@
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<TableView xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="mw.uifx.kontrolery.fotolab.KontrolerPodsumowaniaTabelZbiorow" fx:id="miernikiPlikowTabela">
+    <columns>
+        <TableColumn text="Typ" fx:id="typ" prefWidth="200">
+        </TableColumn>
+        <TableColumn text="Liczba plikow" fx:id="liczbaPlikow" prefWidth="200">
+        </TableColumn>
+        <TableColumn text="Rozmiar" fx:id="rozmiar" prefWidth="200">
+        </TableColumn>
+    </columns>
+</TableView>

@@ -1,0 +1,13 @@
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<TableView xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="mw.uifx.kontrolery.fotolab.KontrolerTabeliZbiorowJPG" fx:id="listaPlikowTabela">
+    <columns>
+        <TableColumn text="Nazwa" fx:id="nazwa" prefWidth="200">
+        </TableColumn>
+        <TableColumn text="Katalog" fx:id="katalog" prefWidth="200">
+        </TableColumn>
+        <TableColumn text="Rozmiar" fx:id="rozmiar" prefWidth="200">
+        </TableColumn>
+    </columns>
+</TableView>

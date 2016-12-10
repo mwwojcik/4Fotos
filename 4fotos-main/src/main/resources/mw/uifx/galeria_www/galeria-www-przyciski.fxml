@@ -1,0 +1,11 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="mw.uifx.kontrolery.galeriawww.PrzyciskiNarzedzioweKontroler" >
+    <children>
+        <Button mnemonicParsing="false" text="Generuj" onMouseClicked="#generujGalerieWWWAkcjaKlik" fx:id="importujPrzycisk"
+                styleClass="przyciski-narzedziowe"/>
+        <Button mnemonicParsing="false" text="Publikuj" styleClass="przyciski-narzedziowe" onMouseClicked="#publikujGalerieWWWAkcjaKlik"/>
+        <Button mnemonicParsing="false" text="Zamknij" onMouseClicked="#zamknijAplikacjeAkcjaKlik" styleClass="przyciski-narzedziowe"/>
+    </children>
+</HBox>

@@ -1,0 +1,12 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="mw.uifx.kontrolery.fotolab.PrzyciskiNarzedzioweKontroler" styleClass="przyciski-narzedziowe-belka" fx:id="przyciskiKontener">
+    <children>
+        <Button mnemonicParsing="false" text="Importuj" onMouseClicked="#importujZdjeciaAkcjaKlik" fx:id="importujPrzycisk"
+                styleClass="przyciski-narzedziowe"/>
+        <Button mnemonicParsing="false" text="Segreguj" onMouseClicked="#segregujZdjeciaAkcjaKlik" styleClass="przyciski-narzedziowe"/>
+        <Button mnemonicParsing="false" text="Usuń kosze" styleClass="przyciski-narzedziowe"/>
+        <Button mnemonicParsing="false" text="Zamknij" onMouseClicked="#zamknijAplikacjeAkcjaKlik" styleClass="przyciski-narzedziowe"/>
+    </children>
+</HBox>

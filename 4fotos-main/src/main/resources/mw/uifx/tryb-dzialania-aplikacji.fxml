@@ -1,0 +1,7 @@
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="mw.uifx.kontrolery.TrybDzialaniaAplikacjiKontroler" prefHeight="100">
+    <children>
+        <ComboBox prefWidth="250.0" prefHeight="30"  minHeight="30" fx:id="trybAplikacjiCombo" styleClass="kontrolka"/>
+    </children>
+</HBox>
