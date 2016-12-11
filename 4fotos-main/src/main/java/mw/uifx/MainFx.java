@@ -10,6 +10,7 @@ import mw.uifx.config.UIConfig;
 import mw.uifx.kontekst.KontekstAplikacji;
 import mw.uifx.wspolne.LokalizacjeFXMLEnum;
 import mw.uifx.zasoby.FabrykaZasobow;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import org.controlsfx.glyphfont.GlyphFont;
 import org.controlsfx.glyphfont.GlyphFontRegistry;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -39,6 +40,10 @@ public class MainFx extends Application {
         ctx.getBean(KontekstAplikacji.class).setMainStage(primaryStage);
         FabrykaZasobow pFabrykaZasobow = ctx.getBean(FabrykaZasobow.class);
         pFabrykaZasobow.setKontekstSpringowy(ctx);
+
+        KonfiguratorAplikacji pKonf=ctx.getBean(KonfiguratorAplikacji.class);
+        System.out.println("wartosc=====>"+pKonf.getTestowa());
+
 
         Parent root = pFabrykaZasobow.podajObiektParentDlaZasobu(LokalizacjeFXMLEnum.ZASOBY_GLOWNE_WIDOK);
         Scene scene = new Scene(root, 1000, 900);
