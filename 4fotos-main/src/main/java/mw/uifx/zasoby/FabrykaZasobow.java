@@ -6,8 +6,11 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import lombok.Getter;
+import lombok.Setter;
 import mw.uifx.kontekst.KontekstAplikacji;
 import mw.uifx.wspolne.LokalizacjeFXMLEnum;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
@@ -17,9 +20,11 @@ import java.io.IOException;
  * Created by mw on 16.08.16.
  */
 @Component
+@Setter
+@Getter
 public class FabrykaZasobow {
 
-    private AnnotationConfigApplicationContext kontekstSpringowy;
+    private ApplicationContext kontekstSpringowy;
 
     public void otworzOknoDialogowe(LokalizacjeFXMLEnum aZasob, Stage aMainStage, KontekstAplikacji aKontekst) {
         Stage stage = new Stage();
@@ -60,11 +65,5 @@ public class FabrykaZasobow {
         return root;
     }
 
-    public AnnotationConfigApplicationContext getKontekstSpringowy() {
-        return kontekstSpringowy;
-    }
 
-    public void setKontekstSpringowy(AnnotationConfigApplicationContext kontekstSpringowy) {
-        this.kontekstSpringowy = kontekstSpringowy;
-    }
 }

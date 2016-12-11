@@ -13,7 +13,9 @@ import mw.uifx.zasoby.FabrykaZasobow;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import org.controlsfx.glyphfont.GlyphFont;
 import org.controlsfx.glyphfont.GlyphFontRegistry;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
@@ -29,9 +31,11 @@ public class MainFx extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        AnnotationConfigApplicationContext ctx =
-                new AnnotationConfigApplicationContext(UIConfig.class);
+        /*AnnotationConfigApplicationContext ctx =
+                new AnnotationConfigApplicationContext(UIConfig.class);*/
 
+        // Bootstrap Spring context here.
+        ApplicationContext ctx = SpringApplication.run(MainFx.class);
 
         Font.loadFont(this.getClass().getResource("/mw/uifx/fonts/fontawesome-webfont.ttf").
                 toExternalForm(), 12);
