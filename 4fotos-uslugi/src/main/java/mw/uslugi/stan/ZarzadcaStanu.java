@@ -2,7 +2,7 @@ package mw.uslugi.stan;
 
 import mw.wspolne.model.io.Katalog;
 import mw.wspolne.model.io.Plik;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,13 +25,13 @@ public class ZarzadcaStanu{
     private Map<String,Katalog> mapaKatalogowGalerii;
 
     @Autowired
-    ZarzadcaWlasnosciUzytkownika zarzadcaWlasnosci;
+    private KonfiguratorAplikacji konfiguratorAplikacji;
 
     @PostConstruct
     private void inicjalizujStan(){
         try {
 
-            mapaKatalogowGalerii =Files.walk(Paths.get(zarzadcaWlasnosci.podajKatalogGlownyGalerii()),1).filter
+            mapaKatalogowGalerii =Files.walk(Paths.get(konfiguratorAplikacji.getKatalogZestawowZdjec()),1).filter
                     (p->Files.isDirectory(p)).map(p->new Katalog(p,podajPliki(p)))
                     .collect(Collectors.toMap(k -> k.getNazwa(), k -> k));
 

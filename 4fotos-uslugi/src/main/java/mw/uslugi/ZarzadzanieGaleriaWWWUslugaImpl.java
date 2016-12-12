@@ -6,8 +6,8 @@ import mw.uslugi.stan.ZarzadcaStanuGaleriiWWW;
 import mw.wspolne.model.*;
 import mw.wspolne.model.io.Zbior;
 import mw.wspolne.model.io.ZbiorDyskowy;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +33,34 @@ import java.util.zip.CRC32;
 @Component
 public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsluga {
 
+    @Autowired
+    protected KonfiguratorAplikacji konfiguratorAplikacji;
+
     private Map<String, String> mapaCRC = new HashMap<String, String>();
 
-    private String KATALOG_ZRODLOWY = ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.GALERIA_WWW_ZRODLO);
+    private String KATALOG_ZRODLOWY = null;
 
-    private String KATALOG_DOCELOWY = ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.GALERIA_WWW_CEL);
+    private String KATALOG_DOCELOWY = null;
 
-    private String SEP = ZarzadcaWlasnosciUzytkownika.podajInstancje().separator();
+    private String SEP = KonfiguratorAplikacji.separator();
 
+    @PostConstruct
+    private void init(){
+        KATALOG_ZRODLOWY = konfiguratorAplikacji.getGaleria().getZrodlo();
+        KATALOG_DOCELOWY = konfiguratorAplikacji.getGaleria().getCel();
+
+        Path pPlikSzablonuGaleria = Paths.get(konfiguratorAplikacji.getKatalogAplikacji() + SEP + "szablony" + SEP + "galeria.html");
+
+        Path pPlikSzablonuKategoria = Paths.get(konfiguratorAplikacji.getKatalogAplikacji()+ SEP + "szablony" + SEP + "kategoria.html");
+
+        try {
+            SZABLON_KATEGORIA = new String(Files.readAllBytes(pPlikSzablonuKategoria));
+            SZABLON_GALERIA = new String(Files.readAllBytes(pPlikSzablonuGaleria));
+
+        } catch (IOException e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
 
     @Autowired
     private ZarzadcaStanuGaleriiWWW stanGaleriiWWW;
@@ -78,24 +98,6 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
         private Path zdjecie;
     }*/
 
-    @PostConstruct
-    private void init() {
-        Path pPlikSzablonuGaleria = Paths.get(ZarzadcaWlasnosciUzytkownika.podajInstancje().
-                podajKatalogHome() + SEP + "szablony" + SEP + "galeria.html");
-
-        Path pPlikSzablonuKategoria = Paths.get(ZarzadcaWlasnosciUzytkownika.podajInstancje().
-                podajKatalogHome() + SEP + "szablony" + SEP + "kategoria.html");
-
-        try {
-            SZABLON_KATEGORIA = new String(Files.readAllBytes(pPlikSzablonuKategoria));
-            SZABLON_GALERIA = new String(Files.readAllBytes(pPlikSzablonuGaleria));
-
-        } catch (IOException e) {
-            throw new IllegalArgumentException(e);
-        }
-
-
-    }
 
 
     @Override
@@ -203,7 +205,7 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
 
             Path root = Paths.get(KATALOG_ZRODLOWY);
 
-            File pGaleriaPlik = new File(ZarzadcaWlasnosciUzytkownika.podajInstancje().podajKatalogHome() + SEP + "galerie.xml");
+            File pGaleriaPlik = new File(konfiguratorAplikacji.getKatalogAplikacji() + SEP + "galerie.xml");
 
             URL pURL = pGaleriaPlik.toURL();
 

@@ -1,7 +1,7 @@
 package mw.uslugi;
 
 import mw.wspolne.model.*;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import org.dom4j.*;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
@@ -28,7 +28,7 @@ public class DokumentXMLHelper {
     private String XML_ATRYBUT_KATALOG = "katalog";
     private String XML_ATRYBUT_PLIK = "plik";
     private String XML_ATRYBUT_OCENA = "ocena";
-    private String SEP = ZarzadcaWlasnosciUzytkownika.podajInstancje().separator();
+    private String SEP = KonfiguratorAplikacji.separator();
 
 
     public Document podajDokument(URL url) {

@@ -1,6 +1,7 @@
 package mw.uslugi.bazowe;
 
 import mw.uslugi.stan.ZarzadcaStanu;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.zdarzenia.publikacja.PublikujacyZdarzeniaBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,9 @@ public class UslugaBazowa {
 
     @Autowired
     protected PublikujacyZdarzeniaBean publikujacy;
+
+    @Autowired
+    protected KonfiguratorAplikacji konfiguratorAplikacji;
 
 
     protected ZarzadcaStanu getZarzadcaStanu() {

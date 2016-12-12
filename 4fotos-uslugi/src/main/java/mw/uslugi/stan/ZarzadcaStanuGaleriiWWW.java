@@ -6,12 +6,14 @@ import mw.wspolne.model.Galeria;
 import mw.wspolne.model.GalerieWWW;
 import mw.wspolne.model.KategoriaWWW;
 import mw.wspolne.model.Obrazek;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
 import org.dom4j.Document;
 import org.dom4j.Element;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -28,8 +30,12 @@ import java.util.stream.Collectors;
  */
 @Component
 public class ZarzadcaStanuGaleriiWWW {
-    private String KATALOG_ZRODLOWY = ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.GALERIA_WWW_ZRODLO);
-    private String SEP = ZarzadcaWlasnosciUzytkownika.podajInstancje().separator();
+
+    @Autowired
+    protected KonfiguratorAplikacji konfiguratorAplikacji;
+
+    private String KATALOG_ZRODLOWY = null;
+    private String SEP = KonfiguratorAplikacji.separator();
 
     private String XML_ATRYBUT_NAZWA = "nazwa";
     private String XML_ATRYBUT_KATALOG = "katalog";
@@ -41,13 +47,18 @@ public class ZarzadcaStanuGaleriiWWW {
     private String XML_ELEM_OBRAZ = "obraz";
 
 
+    @PostConstruct
+    private void init(){
+        KATALOG_ZRODLOWY = konfiguratorAplikacji.getGaleria().getZrodlo();
+    }
+
 
     public GalerieWWW podajGalerieWWW() {
         Path root = Paths.get(KATALOG_ZRODLOWY);
 
         URL pURL = null;
         try {
-            pURL = (new File(ZarzadcaWlasnosciUzytkownika.podajInstancje().podajKatalogHome() + SEP + "galerie.xml")).toURL();
+            pURL = (new File(konfiguratorAplikacji.getKatalogAplikacji()+ SEP + "galerie.xml")).toURL();
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException(e);
         }

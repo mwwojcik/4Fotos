@@ -46,7 +46,9 @@ public class MainFx extends Application {
         pFabrykaZasobow.setKontekstSpringowy(ctx);
 
         KonfiguratorAplikacji pKonf=ctx.getBean(KonfiguratorAplikacji.class);
-        System.out.println("wartosc=====>"+pKonf.getKatalogAplikacji());
+        System.out.println("katAplikacji=====>"+pKonf.getKatalogAplikacji());
+        System.out.println("raw=====>"+pKonf.getPodkatalog().getRaw());
+        System.out.println("raw=====>"+pKonf.getGaleria().getCel());
 
 
         Parent root = pFabrykaZasobow.podajObiektParentDlaZasobu(LokalizacjeFXMLEnum.ZASOBY_GLOWNE_WIDOK);

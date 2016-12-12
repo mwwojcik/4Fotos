@@ -1,10 +1,12 @@
 package mw.uslugi;
 
+import mw.uslugi.bazowe.UslugaBazowa;
 import mw.uslugi.io.ZarzadcaLogowania;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.List;
@@ -19,16 +21,23 @@ import java.util.stream.Collectors;
  * To change this template use File | Settings | File Templates.
  */
 @Component
-public class CzyszczenieUsunietychUslugaImpl implements CzyszczenieUsunietychUsluga {
-    private String SEP = System.getProperty("file.separator");
-    private String KATALOG_ROOT_USUNIETYCH_SCIEZKA = ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.KATALOG_GLOWNY_USUNIETYCH);
+public class CzyszczenieUsunietychUslugaImpl extends UslugaBazowa implements CzyszczenieUsunietychUsluga {
+    private String SEP = KonfiguratorAplikacji.separator();
+    private String KATALOG_ROOT_USUNIETYCH_SCIEZKA = null;
+
+
+    @PostConstruct
+    private  void init(){
+        KATALOG_ROOT_USUNIETYCH_SCIEZKA = konfiguratorAplikacji.getKatalogUsunietych();
+    }
+
     @Override
     public void wyczyscKosze(Set<Path> aWybraneKatalogi) {
         if(aWybraneKatalogi==null){
             return;
         }
 
-        String pNazwaKatUsunie=ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.PODKATALOG_DO_USUNIECIA);
+        String pNazwaKatUsunie=konfiguratorAplikacji.getPodkatalog().getDousuniecia();
         Path KATALOG_ROOT_USUNIETYCH=Paths.get(KATALOG_ROOT_USUNIETYCH_SCIEZKA);
 
         if(!Files.exists(KATALOG_ROOT_USUNIETYCH)){

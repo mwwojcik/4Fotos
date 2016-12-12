@@ -1,15 +1,18 @@
 package mw.uslugi;
 
+import lombok.Getter;
+import lombok.Setter;
 import mw.uslugi.bazowe.UslugaBazowa;
 import mw.wspolne.model.*;
 import mw.wspolne.model.io.Katalog;
 import mw.wspolne.model.io.ZbiorDyskowy;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
 import mw.wspolne.zdarzenia.ProgressEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.nio.file.Path;
 import java.util.*;
 
@@ -21,8 +24,9 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 @Component
+@Setter
+@Getter
 public class GaleriaFasadaUslugImpl extends UslugaBazowa implements GaleriaFasadaUslug {
-
 
     @Autowired
     private GalerieUsluga galerieUsluga;
@@ -36,11 +40,15 @@ public class GaleriaFasadaUslugImpl extends UslugaBazowa implements GaleriaFasad
     @Autowired
     private KopiaZapasowaUsluga kopiaZapasowaUsluga;
 
-    private String SEP = System.getProperty("file.separator");
+    private String SEP = KonfiguratorAplikacji.separator();
 
-    private String RAW_KATALOG = ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.PODKATALOG_RAW);
+    private String RAW_KATALOG = null;
 
 
+    @PostConstruct
+    private void init(){
+        RAW_KATALOG = konfiguratorAplikacji.getPodkatalog().getRaw();
+    }
 
     @Override
     public List<String> podajListeKatalogowGalerii() {
@@ -121,37 +129,7 @@ public class GaleriaFasadaUslugImpl extends UslugaBazowa implements GaleriaFasad
     }
 
 
-    public ImportZdjecUsluga getImportZdjecUsluga() {
-        return importZdjecUsluga;
-    }
 
-    public void setImportZdjecUsluga(ImportZdjecUsluga importZdjecUsluga) {
-        this.importZdjecUsluga = importZdjecUsluga;
-    }
-
-    public CzyszczenieUsunietychUsluga getCzyszczenieUsunietychUsluga() {
-        return czyszczenieUsunietychUsluga;
-    }
-
-    public void setCzyszczenieUsunietychUsluga(CzyszczenieUsunietychUsluga czyszczenieUsunietychUsluga) {
-        this.czyszczenieUsunietychUsluga = czyszczenieUsunietychUsluga;
-    }
-
-    public SegregacjaZdjecUsluga getSegregacjaZdjecUsluga() {
-        return segregacjaZdjecUsluga;
-    }
-
-    public void setSegregacjaZdjecUsluga(SegregacjaZdjecUsluga segregacjaZdjecUsluga) {
-        this.segregacjaZdjecUsluga = segregacjaZdjecUsluga;
-    }
-
-    public KopiaZapasowaUsluga getKopiaZapasowaUsluga() {
-        return kopiaZapasowaUsluga;
-    }
-
-    public void setKopiaZapasowaUsluga(KopiaZapasowaUsluga kopiaZapasowaUsluga) {
-        this.kopiaZapasowaUsluga = kopiaZapasowaUsluga;
-    }
 
     @Override
     public void generujZdarzeniaTestowe() {

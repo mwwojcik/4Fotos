@@ -5,12 +5,14 @@ package mw.uslugi;
 import mw.uslugi.bazowe.UslugaBazowa;
 import mw.uslugi.io.ZarzadcaLogowania;
 import mw.wspolne.model.*;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
+
 import mw.wspolne.zdarzenia.ProgressEvent;
 import org.dom4j.Document;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.*;
@@ -29,17 +31,22 @@ import java.util.stream.Stream;
  */
 @Component
 public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements SegregacjaZdjecUsluga {
-    private String SEP = System.getProperty("file.separator");
+    private String SEP = KonfiguratorAplikacji.separator();
 
-    private Path KATALOG_GLOWNY_CACHE = Paths.get(ZarzadcaWlasnosciUzytkownika.podajInstancje().podajKatalogHome() + SEP + ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.KATALOG_CACHE));
+    private Path KATALOG_GLOWNY_CACHE = null;
 
     private int WIELKOSC_OBRAZKA = 300;
+
+    @PostConstruct
+    private void init(){
+        KATALOG_GLOWNY_CACHE = Paths.get(konfiguratorAplikacji.getKatalogAplikacji() + SEP + konfiguratorAplikacji.getObszarRoboczy().getCache());
+    }
 
     class Licznik {
         public int licznik = 1;
     }
 
-    ;
+
 
     public boolean czyMiniaturyPrzygotowane(String aRootGaleriiWejsciowej){
         Path cel = Paths.get(KATALOG_GLOWNY_CACHE.toFile().getAbsolutePath() + SEP + aRootGaleriiWejsciowej);
@@ -52,7 +59,7 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
             if (!KATALOG_GLOWNY_CACHE.toFile().exists()) {
                 Files.createDirectory(KATALOG_GLOWNY_CACHE);
             }
-            Path pGaleriaWejsciowa = Paths.get(aRootGaleriiWejsciowej.getSciezka().toFile().getAbsolutePath() + SEP + ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.PODKATALOG_JPG));
+            Path pGaleriaWejsciowa = Paths.get(aRootGaleriiWejsciowej.getSciezka().toFile().getAbsolutePath() + SEP + konfiguratorAplikacji.getPodkatalog().getJpg());
             List<Obrazek> pListaObrazkowOryginalnych = podajObrazkiZkatalogu(pGaleriaWejsciowa);
 
 
@@ -92,7 +99,7 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
             if (!KATALOG_GLOWNY_CACHE.toFile().exists()) {
                 Files.createDirectory(KATALOG_GLOWNY_CACHE);
             }
-            Path pGaleriaWejsciowa = Paths.get(aRootGaleriiWejsciowej.getSciezka().toFile().getAbsolutePath() + SEP + ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.PODKATALOG_JPG));
+            Path pGaleriaWejsciowa = Paths.get(aRootGaleriiWejsciowej.getSciezka().toFile().getAbsolutePath() + SEP + konfiguratorAplikacji.getPodkatalog().getJpg());
             List<Obrazek> pListaObrazkowOryginalnych = podajObrazkiZkatalogu(pGaleriaWejsciowa);
 
 
@@ -145,7 +152,7 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
 
     @Override
     public void przenosWybraneDoUsuniecia(Galeria aGaleria) {
-        String katUsNazwa = ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.PODKATALOG_DO_USUNIECIA);
+        String katUsNazwa = konfiguratorAplikacji.getPodkatalog().getDousuniecia();
         Path podkatalogUs = Paths.get(aGaleria.getSciezka() + SEP + katUsNazwa);
 
         try {

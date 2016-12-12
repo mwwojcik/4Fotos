@@ -5,7 +5,7 @@ import com.drew.imaging.ImageProcessingException;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.exif.ExifIFD0Directory;
 import mw.uslugi.io.ZarzadcaLogowania;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import org.imgscalr.Scalr;
 
 import javax.imageio.ImageIO;
@@ -20,7 +20,7 @@ import java.nio.file.Paths;
  */
 public class ObrazkiHelper {
 
-    private static String SEP = ZarzadcaWlasnosciUzytkownika.podajInstancje().separator();
+    private static String SEP = KonfiguratorAplikacji.separator();
 
     public static boolean czyJestWykluczony(Path aSciezka){
         String[] wykluczenia={"txt","jalbum"};

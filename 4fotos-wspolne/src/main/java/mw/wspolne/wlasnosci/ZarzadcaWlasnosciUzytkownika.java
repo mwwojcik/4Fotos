@@ -9,7 +9,9 @@ import java.util.*;
 /**
  * Wymaga ustawienia GUCIO_HOME i GUCIO_DOKUMENTY
  */
+/*
 @Component
+@Deprecated
 public class ZarzadcaWlasnosciUzytkownika {
 
 
@@ -60,13 +62,7 @@ public class ZarzadcaWlasnosciUzytkownika {
 
     }
 
-    public String separator(){
-       String sep=System.getProperty("file.separator");
-        if(sep.equals("\\")){
-            return "\\\\";
-        }
-        return sep;
-    }
+
 
 
     public void wczytaj() {
@@ -81,4 +77,6 @@ public class ZarzadcaWlasnosciUzytkownika {
 
 
 
+
 }
+*/

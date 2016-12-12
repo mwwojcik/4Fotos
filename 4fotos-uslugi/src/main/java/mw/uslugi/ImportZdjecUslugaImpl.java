@@ -1,16 +1,18 @@
 package mw.uslugi;
 
+import mw.uslugi.bazowe.UslugaBazowa;
 import mw.uslugi.io.OperacjeIOUtil;
 import mw.uslugi.io.ZarzadcaLogowania;
 
 import mw.wspolne.model.TypyPlikowEnum;
 
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -27,21 +29,30 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Component
-public class ImportZdjecUslugaImpl implements ImportZdjecUsluga{
+public class ImportZdjecUslugaImpl extends UslugaBazowa implements ImportZdjecUsluga{
 
 
     @Autowired
     private OperacjeIOUtil operacjeIOUtil;
 
-    private Path katalogBazowy = Paths.get(ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.KATALOG_GALERII));
-    private Path katalogAparatu = Paths.get(ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.KATALOG_APARATU));
-    String SEP=ZarzadcaWlasnosciUzytkownika.podajInstancje().separator();
+    private Path katalogBazowy = null;
+    private Path katalogAparatu = null;
+
+
+    String SEP= KonfiguratorAplikacji.separator();
 
     class Katalog{
         Path root;
         Path jpg;
         Path raw;
     }
+
+    @PostConstruct
+    private  void init(){
+        katalogBazowy = Paths.get(konfiguratorAplikacji.getKatalogZestawowZdjec());
+        katalogAparatu = Paths.get(konfiguratorAplikacji.getKatalogAparatu());
+    }
+
     private void sprawdzPoprawnoscPolaczenia(){
 
         if(!katalogAparatu.toFile().exists()){
@@ -75,8 +86,8 @@ public class ImportZdjecUslugaImpl implements ImportZdjecUsluga{
         try {
 
             pWynik.root=Files.createDirectory(pUtworzonyKatalog);
-            pWynik.raw=utworzPodkatalog(pUtworzonyKatalog, ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.PODKATALOG_RAW));
-            pWynik.jpg=utworzPodkatalog(pUtworzonyKatalog,ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.PODKATALOG_JPG));
+            pWynik.raw=utworzPodkatalog(pUtworzonyKatalog,konfiguratorAplikacji.getPodkatalog().getRaw());
+            pWynik.jpg=utworzPodkatalog(pUtworzonyKatalog,konfiguratorAplikacji.getPodkatalog().getJpg());
         } catch (IOException e) {
             throw new IllegalArgumentException(e);
         }

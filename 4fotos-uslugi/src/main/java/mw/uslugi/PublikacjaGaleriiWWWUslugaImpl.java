@@ -4,12 +4,13 @@ package mw.uslugi;
 import mw.uslugi.io.ZarzadcaLogowania;
 import mw.wspolne.model.GalerieWWW;
 import mw.wspolne.model.TypPublikacjiEnum;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -26,6 +27,9 @@ import java.nio.file.Paths;
 @Component
 public class PublikacjaGaleriiWWWUslugaImpl implements PublikacjaGaleriiWWWUsluga {
 
+
+    @Autowired
+    protected KonfiguratorAplikacji konfiguratorAplikacji;
 
     private int inkrement = 1;
 
@@ -61,7 +65,7 @@ public class PublikacjaGaleriiWWWUslugaImpl implements PublikacjaGaleriiWWWUslug
             if (typPublikacji == TypPublikacjiEnum.TYLKO_KASOWANIE) {
                 removeDirectory(client, aURI, "");
             } else {
-                uploadDirectory(client, aURI, ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.GALERIA_WWW_CEL), "");
+                uploadDirectory(client, aURI, konfiguratorAplikacji.getGaleria().getCel(), "");
             }
         } catch (IOException e) {
             throw new IllegalArgumentException(e);

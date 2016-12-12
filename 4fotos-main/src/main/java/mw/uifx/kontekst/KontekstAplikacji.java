@@ -2,7 +2,6 @@ package mw.uifx.kontekst;
 
 import javafx.stage.Stage;
 import mw.wspolne.model.TrybAplikacjiEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

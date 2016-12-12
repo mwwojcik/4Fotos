@@ -1,12 +1,10 @@
 package mw.uslugi;
 
-import mw.uslugi.io.ZarzadcaLogowania;
-import mw.wspolne.kontekst.ZarzadcaObiektow;
 import mw.wspolne.model.TypyPlikowEnum;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
-import org.dom4j.Document;
 import org.dom4j.Element;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedWriter;
@@ -22,7 +20,10 @@ import java.util.Set;
 @Component
 public class KopiaZapasowaUslugaImpl implements KopiaZapasowaUsluga {
 
-    private String SEP = ZarzadcaWlasnosciUzytkownika.podajInstancje().separator();
+    private String SEP = KonfiguratorAplikacji.separator();
+
+
+
 
     private boolean czyJestTypu(String aNazwa, String[] aRozszerzenia) {
         for (String pRoz : aRozszerzenia) {
@@ -70,33 +71,13 @@ public class KopiaZapasowaUslugaImpl implements KopiaZapasowaUsluga {
     @Override
     public Path wykonajKopieZapasowa(Set<Path> aKatalogiWejsciowe, Set<TypyPlikowEnum> pWybraneTypyPlikow) {
 
-        ZarzadcaObiektow.podajInstancje().podajKontekst().zerujMiernikiZajetosci();
-
-        ZarzadcaLogowania.podajInstancje().wyczyscPole();
-
-        Document pDok = DokumentXMLHelper.instancja().podajDokumentDlaKopiiZapasowej();
-
-        aKatalogiWejsciowe.stream().forEach(p -> {
-            Element pElem = DokumentXMLHelper.instancja().podajElementDlaKatalogu(pDok.getRootElement(), p);
-            odwiedzKatalog(p, pElem, pWybraneTypyPlikow);
-        });
-
-        String pStr = DokumentXMLHelper.instancja().zapiszDoStr(pDok).replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "");
-
-        //odczytaj plik i zamien element ELEMENT_FILES_TEMPLATE
-
-        System.out.println(pStr);
-
-        Path pCel = zalozKatalog();
-
-        zapiszDoPliku(pCel, pStr, "ELEMENT_FILES_TEMPLATE");
 
         return null;
     }
 
 
     private Path zalozKatalog() {
-        Path pKatalog = Paths.get(ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.KATALOG_GLOWY_BACKUPU));
+      /*  Path pKatalog = Paths.get(ZarzadcaWlasnosciUzytkownika.podajInstancje().podajWartoscWlasciwosci(NazwaWlasnosciEnum.KATALOG_GLOWY_BACKUPU));
         try {
             if (!Files.exists(pKatalog)) {
                 pKatalog = Files.createDirectory(pKatalog);
@@ -119,12 +100,13 @@ public class KopiaZapasowaUslugaImpl implements KopiaZapasowaUsluga {
         } catch (IOException e) {
             throw new IllegalArgumentException(e);
         }
-        return pKatalog;
+        return pKatalog;*/
+        return null;
     }
 
 
     private void zapiszDoPliku(Path aKatalog, String aTekst, String aWzorzec) {
-        try {
+       /* try {
 
             Path pKatalogSzablonu=Paths.get(ZarzadcaWlasnosciUzytkownika.podajInstancje().podajKatalogHome() + SEP + "szablony" + SEP + "projekt-k3b");
 
@@ -150,7 +132,7 @@ public class KopiaZapasowaUslugaImpl implements KopiaZapasowaUsluga {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
 }

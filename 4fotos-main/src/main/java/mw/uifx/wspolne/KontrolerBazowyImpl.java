@@ -8,7 +8,7 @@ import mw.uifx.kontekst.KontekstAplikacji;
 import mw.uifx.parametry.bazowe.BazowyParam;
 import mw.uifx.zasoby.FabrykaZasobow;
 import mw.uslugi.GaleriaFasadaUslug;
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -32,7 +32,7 @@ public abstract class KontrolerBazowyImpl<P extends BazowyParam> {
     private FabrykaZasobow fabrykaZasobow;
 
     @Autowired
-    private ZarzadcaWlasnosciUzytkownika zarzadcaWlasnosci;
+    private KonfiguratorAplikacji konfiguratorAplikacji;
 
     @Autowired
     protected ExecutorService exec;

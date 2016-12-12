@@ -1,6 +1,7 @@
 package mw.wspolne.model;
 
-import mw.wspolne.wlasnosci.ZarzadcaWlasnosciUzytkownika;
+import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
+
 
 import java.nio.file.Path;
 
@@ -12,7 +13,7 @@ import java.nio.file.Path;
 public class Zasob {
     private String etykieta;
     private Path sciezka;
-    private String SEP = ZarzadcaWlasnosciUzytkownika.podajInstancje().separator();
+    private String SEP = KonfiguratorAplikacji.separator();
 
     public Zasob(String etykieta, Path aSciezka) {
         this.etykieta = etykieta;
