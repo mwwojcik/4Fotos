@@ -50,6 +50,7 @@ public class FabrykaZasobow {
 
     public Parent podajObiektParentDlaZasobu(LokalizacjeFXMLEnum aZasob) {
         Parent root;
+        System.out.println("Zasob=>"+aZasob.getUrl());
         try {
             root = FXMLLoader.load(getClass().getResource(aZasob.getUrl()), null, null,
                     new Callback<Class<?>, Object>() {
