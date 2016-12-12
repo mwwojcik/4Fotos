@@ -6,7 +6,6 @@ import mw.uslugi.bazowe.UslugaBazowa;
 import mw.uslugi.io.ZarzadcaLogowania;
 import mw.wspolne.model.*;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
-import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
 
 import mw.wspolne.zdarzenia.ProgressEvent;
 import org.dom4j.Document;
@@ -16,7 +15,6 @@ import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.*;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;

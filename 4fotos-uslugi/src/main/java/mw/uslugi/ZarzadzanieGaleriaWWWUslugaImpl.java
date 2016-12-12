@@ -4,18 +4,14 @@ package mw.uslugi;
 import mw.uslugi.io.ZarzadcaLogowania;
 import mw.uslugi.stan.ZarzadcaStanuGaleriiWWW;
 import mw.wspolne.model.*;
-import mw.wspolne.model.io.Zbior;
 import mw.wspolne.model.io.ZbiorDyskowy;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
-import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
 import org.dom4j.Document;
-import org.dom4j.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;

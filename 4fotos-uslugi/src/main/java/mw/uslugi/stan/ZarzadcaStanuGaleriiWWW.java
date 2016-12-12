@@ -7,7 +7,6 @@ import mw.wspolne.model.GalerieWWW;
 import mw.wspolne.model.KategoriaWWW;
 import mw.wspolne.model.Obrazek;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
-import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.springframework.beans.factory.annotation.Autowired;

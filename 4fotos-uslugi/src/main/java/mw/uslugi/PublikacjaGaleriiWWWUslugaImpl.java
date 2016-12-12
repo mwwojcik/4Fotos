@@ -5,7 +5,6 @@ import mw.uslugi.io.ZarzadcaLogowania;
 import mw.wspolne.model.GalerieWWW;
 import mw.wspolne.model.TypPublikacjiEnum;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
-import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;

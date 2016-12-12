@@ -7,7 +7,6 @@ import mw.wspolne.model.*;
 import mw.wspolne.model.io.Katalog;
 import mw.wspolne.model.io.ZbiorDyskowy;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
-import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
 import mw.wspolne.zdarzenia.ProgressEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -3,7 +3,6 @@ package mw.uslugi;
 import mw.uslugi.bazowe.UslugaBazowa;
 import mw.uslugi.io.ZarzadcaLogowania;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
-import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

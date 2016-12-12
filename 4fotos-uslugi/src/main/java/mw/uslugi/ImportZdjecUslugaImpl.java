@@ -7,7 +7,6 @@ import mw.uslugi.io.ZarzadcaLogowania;
 import mw.wspolne.model.TypyPlikowEnum;
 
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
-import mw.wspolne.wlasnosci.NazwaWlasnosciEnum;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
