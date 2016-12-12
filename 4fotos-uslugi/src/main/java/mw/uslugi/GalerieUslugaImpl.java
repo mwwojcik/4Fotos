@@ -21,7 +21,7 @@ public class GalerieUslugaImpl extends UslugaBazowa implements GalerieUsluga {
 
 
     public List<String> podajListeKatalogowGalerii() {
-        return getZarzadcaStanu().getMapaKatalogowGalerii().stream().map(k -> k.getNazwa()).sorted()
+        return getZarzadcaStanu().getMapaKatalogowGalerii().stream().map(k -> k.podajNazwe()).sorted()
                 .collect(Collectors.toList());
     }
 
@@ -63,7 +63,7 @@ public class GalerieUslugaImpl extends UslugaBazowa implements GalerieUsluga {
 
             List<ZbiorDyskowy> pZbiory = aListaPlikowOTypieWKatalogu.stream().map(plik -> {
                         try {
-                            return new ZbiorDyskowy(plik.getNazwa(), Files.size(plik.getSciezka()), katalog);
+                            return new ZbiorDyskowy(plik.podajNazwe(), Files.size(plik.getSciezka()), katalog);
                         } catch (IOException e) {
                             throw new IllegalArgumentException(e);
                         }

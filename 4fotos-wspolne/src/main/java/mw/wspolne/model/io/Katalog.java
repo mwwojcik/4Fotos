@@ -1,12 +1,16 @@
 package mw.wspolne.model.io;
 
+import lombok.Getter;
+import mw.wspolne.model.Zasob;
+
 import java.nio.file.Path;
 import java.util.List;
 
 /**
  * Created by Mariusz.Wojcik on 2016-08-17.
  */
-public class Katalog extends Zbior {
+@Getter
+public class Katalog extends Zasob {
     private List<Plik> pliki;
 
     public Katalog(Path sciezka) {
@@ -18,7 +22,5 @@ public class Katalog extends Zbior {
         this.pliki = pliki;
     }
 
-    public List<Plik> getPliki() {
-        return pliki;
-    }
+
 }

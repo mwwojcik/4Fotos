@@ -2,7 +2,6 @@ package mw.uslugi;
 
 import mw.wspolne.model.GalerieWWW;
 import mw.wspolne.model.Zasob;
-import mw.wspolne.model.io.Zbior;
 import mw.wspolne.model.io.ZbiorDyskowy;
 
 import java.util.List;

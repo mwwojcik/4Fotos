@@ -33,7 +33,7 @@ public class ZarzadcaStanu{
 
             mapaKatalogowGalerii =Files.walk(Paths.get(konfiguratorAplikacji.getKatalogZestawowZdjec()),1).filter
                     (p->Files.isDirectory(p)).map(p->new Katalog(p,podajPliki(p)))
-                    .collect(Collectors.toMap(k -> k.getNazwa(), k -> k));
+                    .collect(Collectors.toMap(k -> k.podajNazwe(), k -> k));
 
         } catch (IOException e) {
             throw new IllegalArgumentException();

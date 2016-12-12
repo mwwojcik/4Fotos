@@ -1,10 +1,13 @@
 package mw.wspolne.model.io;
 
+import lombok.Getter;
+
 import java.text.DecimalFormat;
 
 /**
  * Created by mw on 17.08.16.
  */
+@Getter
 public class ZbiorDyskowy {
     private String nazwa;
     private long rozmiar;
@@ -16,17 +19,7 @@ public class ZbiorDyskowy {
         this.nazwaKatalogu = nazwaKatalogu;
     }
 
-    public String getNazwa() {
-        return nazwa;
-    }
 
-    public long getRozmiar() {
-        return rozmiar;
-    }
-
-    public String getNazwaKatalogu() {
-        return nazwaKatalogu;
-    }
 
     public String getRozmiarMB() {
         double pRozmiar = rozmiar;

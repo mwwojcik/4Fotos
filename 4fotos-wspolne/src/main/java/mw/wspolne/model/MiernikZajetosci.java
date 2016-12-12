@@ -1,5 +1,8 @@
 package mw.wspolne.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.text.DecimalFormat;
 
 /**
@@ -9,26 +12,14 @@ import java.text.DecimalFormat;
  * Time: 16:29
  * To change this template use File | Settings | File Templates.
  */
+@Setter
+@Getter
 public class MiernikZajetosci {
     private String rodzaj;
     private long rozmiar;
     private int liczbaPlikow;
 
-    public long getRozmiar() {
-        return rozmiar;
-    }
 
-    public void setRozmiar(long rozmiar) {
-        this.rozmiar = rozmiar;
-    }
-
-    public int getLiczbaPlikow() {
-        return liczbaPlikow;
-    }
-
-    public void setLiczbaPlikow(int liczbaPlikow) {
-        this.liczbaPlikow = liczbaPlikow;
-    }
 
     public String getRozmiarMB() {
         double pRozmiar = rozmiar;

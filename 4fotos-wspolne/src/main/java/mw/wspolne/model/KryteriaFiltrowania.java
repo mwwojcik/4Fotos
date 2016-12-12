@@ -1,8 +1,11 @@
 package mw.wspolne.model;
 
+import lombok.Getter;
+
 /**
  * Created by mw on 28.01.16.
  */
+@Getter
 public class KryteriaFiltrowania {
     private double ocena=5;
     private OperatorFiltrowaniaEnum rodzajKryteriow = OperatorFiltrowaniaEnum.MNIEJSZE_ROWNE;

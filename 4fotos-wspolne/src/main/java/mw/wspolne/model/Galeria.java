@@ -1,5 +1,7 @@
 package mw.wspolne.model;
 
+import lombok.Getter;
+
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +11,7 @@ import java.util.stream.Collectors;
 /**
  * Created by mw on 24.01.16.
  */
+@Getter
 public class Galeria extends Zasob {
     public static String PLIK_OCEN = "oceny.xml";
     private List<Obrazek> obrazki;
