@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery lightGallery demo</title>
+    <link href="../../dist/css/lightgallery.css" rel="stylesheet">
+    <link href="../../dist/css/galeria.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body class="home">
+<div class="my-toolbar">
+    <div class="mw-lg-actions">
+        <span id="poprzedniBtn" class="mw-lg-prev lg-icon"/>
+    </div>
+    <span class="tytul">TYTUL</span>
+</div>
+<div class="demo-gallery">
+    <ul id="lightgallery" class="list-unstyled row">
+        ELEMENTY_KATEGORII_TEMPLATE
+    </ul>
+</div>
+<script type="text/javascript">
+        $(document).ready(function(){
+            $("#poprzedniBtn").on('click', function(){
+                window.location = "../../../index.html";
+            });
+        });
+
+
+        </script>
+<!--<script type="text/javascript">
+        $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+        });
+        </script>-->
+<!--<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+<script src="../../dist/js/lightgallery.js"></script>
+<script src="../../dist/js/lg-fullscreen.js"></script>
+<script src="../../dist/js/lg-thumbnail.js"></script>
+<script src="../../dist/js/lg-video.js"></script>
+<script src="../../dist/js/lg-autoplay.js"></script>
+<script src="../../dist/js/lg-zoom.js"></script>
+<script src="../../dist/js/lg-hash.js"></script>
+<script src="../../dist/js/lg-pager.js"></script>
+<script src="../../lib/jquery.mousewheel.min.js"></script>-->
+</body>
+</html>
