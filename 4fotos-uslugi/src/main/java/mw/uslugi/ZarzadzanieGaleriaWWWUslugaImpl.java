@@ -6,6 +6,9 @@ import mw.uslugi.stan.ZarzadcaStanuGaleriiWWW;
 import mw.wspolne.model.*;
 import mw.wspolne.model.io.ZbiorDyskowy;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
+import mw.wspolne.zdarzenia.ZdarzenieInicjalizacjiPaskaPostepu;
+import mw.wspolne.zdarzenia.ZdarzenieInkrementacjiPaskaPostepu;
+import mw.wspolne.zdarzenia.publikacja.PublikujacyZdarzeniaBean;
 import org.dom4j.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -31,6 +34,9 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
 
     @Autowired
     protected KonfiguratorAplikacji konfiguratorAplikacji;
+
+    @Autowired
+    protected PublikujacyZdarzeniaBean publikujacy;
 
     private Map<String, String> mapaCRC = new HashMap<String, String>();
 
@@ -249,10 +255,12 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
         final Inkrement inkrement = new Inkrement();
         inkrement.wartosc = 1;
 
-        long aLiczbaZdjec = aGalerieWWW.getListaKategorii().stream().flatMap
+        long liczbaZdjec =aGalerieWWW.getListaKategorii().stream().flatMap
                 (kat -> kat.getListaGalerii().stream().flatMap(g -> g.getObrazki().stream())).count();
 
-        //MonitorPaskaPostepu.podajInstancje().inicjalizujPasekPostepu("Eksport galerii", Integer.parseInt(String.valueOf(aLiczbaZdjec)));
+        System.out.println("====================================>>>>>"+liczbaZdjec);
+
+        publikujacy.publikujZdarzenie(new ZdarzenieInicjalizacjiPaskaPostepu(this,liczbaZdjec,0,"Przygotowanie galerii WWW",""));
 
         aGalerieWWW.getListaKategorii().forEach(kat -> {
             Path katCel = zalozKatalog(kat.getSciezka());
@@ -277,9 +285,11 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
                 } catch (IOException ex) {
                     throw new IllegalArgumentException(ex);
                 }
-                gal.getObrazki().parallelStream().forEach(zd -> {
+                gal.getObrazki().stream().forEach(zd -> {
 
-                    //MonitorPaskaPostepu.podajInstancje().aktualizujStan(inkrement.wartosc++);
+                    publikujacy.publikujZdarzenie(new ZdarzenieInkrementacjiPaskaPostepu(this,liczbaZdjec,inkrement.wartosc++,"Przygotowanie galerii WWW",
+                            "Zapisano obrazek=>"+zd.podajNazwe()));
+
                     ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), cel, WYMIAR_ZDJECIA, KATALOG_ZRODLOWY, null);
                     ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), cel, WYMIAR_MINIATURA, KATALOG_ZRODLOWY, "-miniatura");
                 });

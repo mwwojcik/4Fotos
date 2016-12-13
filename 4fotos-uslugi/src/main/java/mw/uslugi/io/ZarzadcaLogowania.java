@@ -67,7 +67,7 @@ public class ZarzadcaLogowania {
 
     public synchronized   void logujKomunikat(String aKomunikat){
         infoLogger.info(aKomunikat);
-        System.out.println(aKomunikat);
+        //System.out.println(aKomunikat);
         //MonitorPolaRaportu.podajInstancje().aktualizujStan(aKomunikat);
     }
 

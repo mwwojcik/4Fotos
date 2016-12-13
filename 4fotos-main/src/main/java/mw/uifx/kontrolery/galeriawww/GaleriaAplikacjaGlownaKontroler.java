@@ -116,8 +116,12 @@ public class GaleriaAplikacjaGlownaKontroler extends KontrolerBazowyImpl{
     }
 
     public void generujGalerieWWWAkcjaKlik(){
+        uruchomZadanieAsynchroniczne(()->wygenerujGalerie());
+    }
 
+    private Boolean wygenerujGalerie() {
         zarzadzanieGaleriaWWWUsluga.generujGalerieWWW();
+        return true;
     }
 
     public void publikujGalerieWWWAkcjaKlik(){

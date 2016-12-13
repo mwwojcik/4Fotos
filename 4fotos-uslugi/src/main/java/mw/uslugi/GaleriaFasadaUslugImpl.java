@@ -7,7 +7,7 @@ import mw.wspolne.model.*;
 import mw.wspolne.model.io.Katalog;
 import mw.wspolne.model.io.ZbiorDyskowy;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
-import mw.wspolne.zdarzenia.ProgressEvent;
+import mw.wspolne.zdarzenia.ZdarzenieInkrementacjiPaskaPostepu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -134,7 +134,7 @@ public class GaleriaFasadaUslugImpl extends UslugaBazowa implements GaleriaFasad
     public void generujZdarzeniaTestowe() {
         int max=100;
         for(int i=0;i<max;i++) {
-            getPublikujacy().publikujZdarzenie(new ProgressEvent(this, 100, i, "Przygotowanie podglądu", ""));
+            getPublikujacy().publikujZdarzenie(new ZdarzenieInkrementacjiPaskaPostepu(this, 100, i, "Przygotowanie podglądu", ""));
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {

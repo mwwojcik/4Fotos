@@ -7,7 +7,8 @@ import mw.uslugi.io.ZarzadcaLogowania;
 import mw.wspolne.model.*;
 import mw.wspolne.wlasnosci.KonfiguratorAplikacji;
 
-import mw.wspolne.zdarzenia.ProgressEvent;
+import mw.wspolne.zdarzenia.ZdarzenieInicjalizacjiPaskaPostepu;
+import mw.wspolne.zdarzenia.ZdarzenieInkrementacjiPaskaPostepu;
 import org.dom4j.Document;
 import org.springframework.stereotype.Component;
 
@@ -68,11 +69,11 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
                 Files.createDirectory(cel);
 
                // MonitorPaskaPostepu.podajInstancje().inicjalizujPasekPostepu("Przygotowywanie podglądu", pListaObrazkowOryginalnych.size());
-                getPublikujacy().publikujZdarzenie(new ProgressEvent(this,pListaObrazkowOryginalnych.size(),0,"Przygotowanie podglądu",""));
+                getPublikujacy().publikujZdarzenie(new ZdarzenieInicjalizacjiPaskaPostepu(this,pListaObrazkowOryginalnych.size(),0,"Przygotowanie podglądu",""));
                 Licznik pLicznik = new Licznik();
                 pListaObrazkowOryginalnych.stream().forEach(o -> {
                     //  MonitorPaskaPostepu.podajInstancje().aktualizujStan(pLicznik.licznik++);
-                    getPublikujacy().publikujZdarzenie(new ProgressEvent(this,pListaObrazkowOryginalnych.size(),pLicznik.licznik++,"Przygotowanie podglądu",o.getSciezka().getFileName().toString()));
+                    getPublikujacy().publikujZdarzenie(new ZdarzenieInkrementacjiPaskaPostepu(this,pListaObrazkowOryginalnych.size(),pLicznik.licznik++,"Przygotowanie podglądu",o.getSciezka().getFileName().toString()));
 
                     o.setMiniatura(new Obrazek(ObrazkiHelper.przeskalujObrazek(o.getSciezka(), cel, WIELKOSC_OBRAZKA, aRootGaleriiWejsciowej.podajSciezkeRoot(), null)));
                     if (pObrazkiXml != null && pObrazkiXml.containsKey(o.podajNazwe())) {
@@ -178,11 +179,11 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
 
 
         Licznik pLicznik = new Licznik();
-        getPublikujacy().publikujZdarzenie(new ProgressEvent(this,maskiPlikowDoUsuniecia.size(),pLicznik.licznik++,"Przenoszenie do usuniętych",""));
+        getPublikujacy().publikujZdarzenie(new ZdarzenieInicjalizacjiPaskaPostepu(this,maskiPlikowDoUsuniecia.size(),pLicznik.licznik++,"Przenoszenie do usuniętych",""));
 
         maskiPlikowDoUsuniecia.forEach(maska -> {
             try {
-                getPublikujacy().publikujZdarzenie(new ProgressEvent(this,maskiPlikowDoUsuniecia.size(),pLicznik.licznik++,"Przenoszenie do usuniętych",""));
+                getPublikujacy().publikujZdarzenie(new ZdarzenieInkrementacjiPaskaPostepu(this,maskiPlikowDoUsuniecia.size(),pLicznik.licznik++,"Przenoszenie do usuniętych",""));
                 Stream<Path> pZnalezione = Files.find(aGaleria.getSciezka(), 10, (p, a) -> p.getFileName().toString().contains(maska));
 
                 pZnalezione.forEach(p -> {

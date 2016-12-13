@@ -3,7 +3,8 @@ package mw.uslugi.io;
 
 import mw.uslugi.bazowe.UslugaBazowa;
 import mw.wspolne.model.TypyPlikowEnum;
-import mw.wspolne.zdarzenia.ProgressEvent;
+import mw.wspolne.zdarzenia.ZdarzenieInicjalizacjiPaskaPostepu;
+import mw.wspolne.zdarzenia.ZdarzenieInkrementacjiPaskaPostepu;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Component;
 
@@ -80,7 +81,7 @@ public class OperacjeIOUtil extends UslugaBazowa{
 
         Collection<File>pPLikiDoSkasowania=FileUtils.listFiles(aKatalogZ.toFile(),(aTypPlikow!=null)?new String[]{aTypPlikow.getRozszerzenie(),aTypPlikow.getRozszerzenie().toUpperCase()}:null,false);
 
-        getPublikujacy().publikujZdarzenie(new ProgressEvent(this,pPLikiDoSkasowania.size(),0,"Import plików typu"+aTypPlikow.getEtykieta().toLowerCase(),""));
+        getPublikujacy().publikujZdarzenie(new ZdarzenieInicjalizacjiPaskaPostepu(this,pPLikiDoSkasowania.size(),0,"Import plików typu"+aTypPlikow.getEtykieta().toLowerCase(),""));
         int i=0;
         for(File pPlik:pPLikiDoSkasowania){
             try {
@@ -94,12 +95,12 @@ public class OperacjeIOUtil extends UslugaBazowa{
                 }
                 FileUtils.moveFile(pPlik,pPlikDest);
                 i++;
-                getPublikujacy().publikujZdarzenie(new ProgressEvent(this,pPLikiDoSkasowania.size(),i,"Import plików typu "+aTypPlikow.getEtykieta(),
+                getPublikujacy().publikujZdarzenie(new ZdarzenieInkrementacjiPaskaPostepu(this,pPLikiDoSkasowania.size(),i,"Import plików typu "+aTypPlikow.getEtykieta(),
                         "Plik przeniesiony do lokalizacji=> "+pPlikDest.getAbsolutePath()));
                 ZarzadcaLogowania.podajInstancje().logujKomunikat("Plik przeniesiony do lokalizacji=> "+pPlikDest.getAbsolutePath());
 
             } catch (IOException e) {
-                getPublikujacy().publikujZdarzenie(new ProgressEvent(this,pPLikiDoSkasowania.size(),i,"Import plików typu "+aTypPlikow.getEtykieta(),
+                getPublikujacy().publikujZdarzenie(new ZdarzenieInkrementacjiPaskaPostepu(this,pPLikiDoSkasowania.size(),i,"Import plików typu "+aTypPlikow.getEtykieta(),
                         "Błąd! Nie udało się przenieść pliku=>"+pPlik.getName()));
                 ZarzadcaLogowania.podajInstancje().logujKomunikat("Błąd! Nie udało się przenieść pliku=>"+pPlik.getName());
             }

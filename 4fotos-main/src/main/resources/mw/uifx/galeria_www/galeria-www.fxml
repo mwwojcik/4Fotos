@@ -84,11 +84,12 @@
             </content>
         </TitledPane>
 
-        <TitledPane alignment="TOP_LEFT" collapsible="false" prefWidth="500.0" text="Postęp" textOverrun="CLIP"
-                    GridPane.rowIndex="3">
-            <ProgressBar prefHeight="20" prefWidth="Infinity" progress="0.0"/>
+        <TitledPane alignment="TOP_LEFT" collapsible="false" text="Zawartość"
+                    textOverrun="CLIP" GridPane.rowIndex="3" styleClass="kontrolka">
+            <content>
+                <fx:include source="../wspolne/pasek-postepu.fxml" fx:id="pasekPostepuWidok"/>
+            </content>
         </TitledPane>
-
     </children>
 
 </GridPane>
