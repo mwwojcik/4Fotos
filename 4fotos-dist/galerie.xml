@@ -1,624 +1,623 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <galerie>
-    <kategoria nazwa="Martwa natura" katalog="martwaNatura">
-        <galeria nazwa="Stare maszyny" katalog="stareMaszyny">
-            <obraz plik="dsc01072.jpg"/>
-            <obraz plik="dsc01438.jpg"/>
-            <obraz plik="dsc01455.jpg"/>
-            <obraz plik="dsc01470.jpg"/>
-            <obraz plik="dsc01528.jpg"/>
-            <obraz plik="dsc01530.jpg"/>
-            <obraz plik="dsc01532.jpg"/>
-            <obraz plik="dsc01551.jpg"/>
-        </galeria>
-        <galeria nazwa="Graffiti" katalog="graffitiSluzew">
-            <obraz plik="dsc01006.jpg"/>
-            <obraz plik="dsc01007.jpg"/>
-            <obraz plik="dsc01010.jpg"/>
-            <obraz plik="dsc01011.jpg"/>
-            <obraz plik="dsc01019.jpg"/>
-            <obraz plik="dsc01021.jpg"/>
-            <obraz plik="dsc01022.jpg"/>
-            <obraz plik="dsc01023.jpg"/>
-            <obraz plik="dsc01024.jpg"/>
-            <obraz plik="dsc01026.jpg"/>
-            <obraz plik="dsc01031.jpg"/>
-            <obraz plik="dsc01035.jpg"/>
-            <obraz plik="dsc01038.jpg"/>
-            <obraz plik="dsc01040.jpg"/>
-            <obraz plik="dsc01045.jpg"/>
-            <obraz plik="dsc01046.jpg"/>
-            <obraz plik="dsc01048.jpg"/>
-            <obraz plik="dsc01049.jpg"/>
-        </galeria>
-        <galeria nazwa="Zwyczajne niezwyczajne" katalog="zwyczajneNiezwyczajne">
-            <obraz plik="dsc00415.jpg"/>
-            <obraz plik="dsc00516.jpg"/>
-            <obraz plik="dsc00616.jpg"/>
-        </galeria>
-        <galeria nazwa="Aranżacje" katalog="aranzacje">
-            <obraz plik="dsc00554.jpg"/>
-            <obraz plik="dsc00754.jpg"/>
-        </galeria>
-    </kategoria>
-    <kategoria nazwa="Nasze miasto" katalog="naszeMiasto">
-        <galeria nazwa="Szmulowizna" katalog="szmulowizna">
-            <obraz plik="dsc00784.jpg"/>
-            <obraz plik="dsc00795.jpg"/>
-            <obraz plik="dsc00802.jpg"/>
-            <obraz plik="dsc00809.jpg"/>
-            <obraz plik="dsc00816.jpg"/>
-            <obraz plik="dsc00818.jpg"/>
-            <obraz plik="dsc00824.jpg"/>
-            <obraz plik="dsc00835.jpg"/>
-            <obraz plik="dsc00842.jpg"/>
-            <obraz plik="dsc00856.jpg"/>
-            <obraz plik="dsc00874.jpg"/>
-            <obraz plik="dsc00893.jpg"/>
-            <obraz plik="dsc00905.jpg"/>
-            <obraz plik="dsc00906.jpg"/>
-            <obraz plik="dsc00910.jpg"/>
-        </galeria>
-        <galeria nazwa="Warszawa w obiektywie" katalog="warszawaWObiektywie">
-            <obraz plik="dsc01742.jpg"/>
-            <obraz plik="dsc02016.jpg"/>
-            <obraz plik="dsc02017.jpg"/>
-            <obraz plik="dsc06840.jpg"/>
-            <obraz plik="dsc06845-1.jpg"/>
-            <obraz plik="dsc06865.jpg"/>
-            <obraz plik="dsc06868.jpg"/>
-            <obraz plik="dsc06869.jpg"/>
-            <obraz plik="dsc06873.jpg"/>
-            <obraz plik="dsc06882.jpg"/>
-            <obraz plik="dsc06986.jpg"/>
-            <obraz plik="dsc07138.jpg"/>
-            <obraz plik="wilanowPalac.jpg"/>
-        </galeria>
-        <galeria nazwa="Warszawskie mosty" katalog="warszawskieMosty">
-            <obraz plik="dsc04367.jpg"/>
-            <obraz plik="dsc04401.jpg"/>
-            <obraz plik="dsc04416.jpg"/>
-            <obraz plik="dsc04424.jpg"/>
-            <obraz plik="dsc04426.jpg"/>
-            <obraz plik="dsc04433.jpg"/>
-            <obraz plik="dsc04444.jpg"/>
-            <obraz plik="dsc04448.jpg"/>
-            <obraz plik="dsc04461.jpg"/>
-            <obraz plik="dsc04490.jpg"/>
-            <obraz plik="dsc04501.jpg"/>
-            <obraz plik="dsc04506.jpg"/>
-            <obraz plik="dsc04623.jpg"/>
-            <obraz plik="dsc04624.jpg"/>
-            <obraz plik="dsc04630.jpg"/>
-            <obraz plik="dsc04633.jpg"/>
-            <obraz plik="dsc04641.jpg"/>
-            <obraz plik="dsc04646.jpg"/>
-        </galeria>
-        <galeria nazwa="Łazienki" katalog="lazienki">
-            <obraz plik="dsc00643.jpg"/>
-            <obraz plik="dsc00650.jpg"/>
-            <obraz plik="dsc00654.jpg"/>
-            <obraz plik="dsc00659.jpg"/>
-            <obraz plik="dsc00661.jpg"/>
-            <obraz plik="dsc00664.jpg"/>
-            <obraz plik="dsc00666.jpg"/>
-            <obraz plik="dsc00669.jpg"/>
-            <obraz plik="dsc00671.jpg"/>
-            <obraz plik="dsc00682.jpg"/>
-            <obraz plik="dsc00687.jpg"/>
-            <obraz plik="dsc00689.jpg"/>
-            <obraz plik="dsc00690.jpg"/>
-        </galeria>
-        <galeria nazwa="Starówka" katalog="starowkaWarszawa">
-            <obraz plik="dsc03203.jpg"/>
-            <obraz plik="dsc04653.jpg"/>
-            <obraz plik="dsc05133.jpg"/>
-            <obraz plik="dsc05138.jpg"/>
-            <obraz plik="dsc05151.jpg"/>
-            <obraz plik="dsc05157.jpg"/>
-            <obraz plik="dsc05173.jpg"/>
-            <obraz plik="dsc05174.jpg"/>
-            <obraz plik="dsc05651.jpg"/>
-            <obraz plik="dsc05673.jpg"/>
-            <obraz plik="dsc05688.jpg"/>
-            <obraz plik="dsc05714.jpg"/>
-            <obraz plik="dsc05715.jpg"/>
-            <obraz plik="placZamkowy.jpg"/>
-        </galeria>
-        <galeria nazwa="Jesień" katalog="jesien">
-            <obraz plik="dsc03994.jpg"/>
-            <obraz plik="dsc03996.jpg"/>
-            <obraz plik="dsc03997.jpg"/>
-            <obraz plik="dsc04002.jpg"/>
-            <obraz plik="dsc04003.jpg"/>
-            <obraz plik="dsc04004.jpg"/>
-            <obraz plik="dsc04006.jpg"/>
-            <obraz plik="dsc04009.jpg"/>
-            <obraz plik="dsc04021.jpg"/>
-        </galeria>
-        <galeria nazwa="Warszawskie ulice" katalog="warszawskieUlice">
-            <obraz plik="trabka_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Powązki" katalog="powazkiCmWojskowy">
-            <obraz plik="dsc04531.jpg"/>
-            <obraz plik="dsc04542.jpg"/>
-            <obraz plik="dsc04546.jpg"/>
-            <obraz plik="dsc04548.jpg"/>
-            <obraz plik="dsc04551.jpg"/>
-            <obraz plik="dsc04555.jpg"/>
-            <obraz plik="dsc04568.jpg"/>
-            <obraz plik="dsc04579.jpg"/>
-            <obraz plik="dsc04583.jpg"/>
-            <obraz plik="dsc04597.jpg"/>
-            <obraz plik="dsc04598.jpg"/>
-            <obraz plik="dsc04600.jpg"/>
-            <obraz plik="dsc04603.jpg"/>
-        </galeria>
-    </kategoria>
-    <kategoria nazwa="Wydarzenia" katalog="wydarzenia">
-        <galeria nazwa="Sulejów 2008" katalog="sulejow2008">
-            <obraz plik="dsc00160.jpg"/>
-            <obraz plik="dsc00024.jpg"/>
-            <obraz plik="dsc00038.jpg"/>
-            <obraz plik="dsc000451.jpg"/>
-            <obraz plik="dsc000491.jpg"/>
-            <obraz plik="dsc00052.jpg"/>
-            <obraz plik="dsc000551.jpg"/>
-            <obraz plik="dsc000761.jpg"/>
-            <obraz plik="dsc00079.jpg"/>
-            <obraz plik="dsc00084.jpg"/>
-            <obraz plik="dsc000861.jpg"/>
-            <obraz plik="dsc000871.jpg"/>
-            <obraz plik="dsc000891.jpg"/>
-            <obraz plik="dsc00105.jpg"/>
-            <obraz plik="dsc00106.jpg"/>
-            <obraz plik="dsc00114.jpg"/>
-            <obraz plik="dsc00115.jpg"/>
-            <obraz plik="dsc00119.jpg"/>
-            <obraz plik="dsc00125.jpg"/>
-            <obraz plik="dsc001281.jpg"/>
-            <obraz plik="dsc001301.jpg"/>
-            <obraz plik="dsc001421.jpg"/>
-            <obraz plik="dsc00148.jpg"/>
-            <obraz plik="dsc00153.jpg"/>
-            <obraz plik="dsc00157.jpg"/>
-            <obraz plik="dsc001681.jpg"/>
-            <obraz plik="dsc00162.jpg"/>
-        </galeria>
-        <galeria nazwa="Wiosna w Słupnie" katalog="wiosnaWSlupnie">
-            <obraz plik="dsc00381.jpg"/>
-            <obraz plik="dsc00387.jpg"/>
-            <obraz plik="dsc00388.jpg"/>
-            <obraz plik="dsc00389.jpg"/>
-            <obraz plik="dsc00403.jpg"/>
-            <obraz plik="dsc00404.jpg"/>
-            <obraz plik="dsc00406.jpg"/>
-            <obraz plik="dsc00410.jpg"/>
-            <obraz plik="dsc00414.jpg"/>
-            <obraz plik="dsc00415.jpg"/>
-            <obraz plik="dsc00416.jpg"/>
-            <obraz plik="dsc00429.jpg"/>
-            <obraz plik="dsc00432.jpg"/>
-        </galeria>
-        <galeria nazwa="Święta 2008" katalog="swieta2008">
-            <obraz plik="DSC00219.jpg"/>
-            <obraz plik="DSC00224.jpg"/>
-            <obraz plik="DSC00226.jpg"/>
-            <obraz plik="DSC00231.jpg"/>
-            <obraz plik="DSC002361.jpg"/>
-            <obraz plik="DSC00260.jpg"/>
-            <obraz plik="dsc00144.jpg"/>
-        </galeria>
-        <galeria nazwa="Zakopane 2008" katalog="zakopane2008">
-            <obraz plik="dsc04068.jpg"/>
-            <obraz plik="dsc04113.jpg"/>
-            <obraz plik="dsc04118.jpg"/>
-            <obraz plik="dsc04126.jpg"/>
-            <obraz plik="dsc04142.jpg"/>
-            <obraz plik="dsc04240.jpg"/>
-            <obraz plik="dsc04251.jpg"/>
-            <obraz plik="dsc04264.jpg"/>
-            <obraz plik="dsc04265.jpg"/>
-            <obraz plik="dsc04275.jpg"/>
-            <obraz plik="dsc04282.jpg"/>
-            <obraz plik="dsc04294.jpg"/>
-            <obraz plik="dsc04309.jpg"/>
-            <obraz plik="dsc04313.jpg"/>
-            <obraz plik="dsc04333.jpg"/>
-        </galeria>
-        <galeria nazwa="Promocja Kraków" katalog="promocjaKrakow">
-            <obraz plik="dsc07980_www.jpg"/>
-            <obraz plik="dsc07981_www.jpg"/>
-            <obraz plik="dsc07982_www.jpg"/>
-            <obraz plik="dsc07993_www.jpg"/>
-            <obraz plik="dsc08007_www.jpg"/>
-            <obraz plik="dsc08029_www.jpg"/>
-            <obraz plik="dsc08031_www.jpg"/>
-            <obraz plik="dsc08033_www.jpg"/>
-            <obraz plik="dsc08043_www.jpg"/>
-            <obraz plik="dsc08049_www.jpg"/>
-            <obraz plik="dsc08051_www.jpg"/>
-            <obraz plik="dsc08063_www.jpg"/>
-            <obraz plik="dsc08069_www.jpg"/>
-            <obraz plik="dsc08086-1_www.jpg"/>
-            <obraz plik="dsc08088_www.jpg"/>
-            <obraz plik="dsc08099_www.jpg"/>
-            <obraz plik="dsc08117_www.jpg"/>
-            <obraz plik="dsc08127_www.jpg"/>
-            <obraz plik="dsc08134_www.jpg"/>
-            <obraz plik="dsc08136_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Wianki 2008" katalog="wianki2008">
-            <obraz plik="dsc01231.jpg"/>
-            <obraz plik="dsc01236.jpg"/>
-            <obraz plik="dsc01242.jpg"/>
-            <obraz plik="dsc01246.jpg"/>
-            <obraz plik="dsc01252.jpg"/>
-            <obraz plik="dsc01257.jpg"/>
-            <obraz plik="dsc01261.jpg"/>
-            <obraz plik="dsc01264.jpg"/>
-            <obraz plik="dsc01269.jpg"/>
-            <obraz plik="dsc01271.jpg"/>
-            <obraz plik="dsc01272.jpg"/>
-            <obraz plik="dsc01274.jpg"/>
-            <obraz plik="dsc01276.jpg"/>
-            <obraz plik="dsc01277.jpg"/>
-            <obraz plik="dsc01301.jpg"/>
-            <obraz plik="dsc013021.jpg"/>
-            <obraz plik="dsc013101.jpg"/>
-            <obraz plik="dsc013161.jpg"/>
-            <obraz plik="dsc013201.jpg"/>
-            <obraz plik="dsc01395.jpg"/>
-            <obraz plik="dsc01397.jpg"/>
-            <obraz plik="dsc01402.jpg"/>
-            <obraz plik="dsc01403.jpg"/>
-            <obraz plik="dsc01406.jpg"/>
-            <obraz plik="dsc014131.jpg"/>
-        </galeria>
-    </kategoria>
-    <kategoria nazwa="Przyroda" katalog="przyroda">
-        <galeria nazwa="Pieniny" katalog="pieniny">
-            <obraz plik="dsc00792_www.jpg"/>
-            <obraz plik="dsc00827_www.jpg"/>
-            <obraz plik="dsc00833_www.jpg"/>
-            <obraz plik="dsc00841_www.jpg"/>
-            <obraz plik="dsc00843_www.jpg"/>
-        </galeria>
-        <galeria nazwa="KPN" katalog="kampinos">
-            <obraz plik="2009-10-dsc09452_www.jpg"/>
-            <obraz plik="dsc00246_www.jpg"/>
-            <obraz plik="dsc00249_www.jpg"/>
-            <obraz plik="dsc00250_www.jpg"/>
-            <obraz plik="dsc00279_www.jpg"/>
-            <obraz plik="dsc00288_www.jpg"/>
-            <obraz plik="dsc00295_www.jpg"/>
-            <obraz plik="dsc00687-2_www.jpg"/>
-            <obraz plik="dsc00689_www.jpg"/>
-            <obraz plik="dsc00697_www.jpg"/>
-            <obraz plik="dsc00703_www.jpg"/>
-            <obraz plik="dsc00754_www.jpg"/>
-            <obraz plik="dsc00778_www.jpg"/>
-            <obraz plik="dsc00782_www.jpg"/>
-            <obraz plik="dsc00792_www.jpg"/>
-            <obraz plik="dsc00801_www.jpg"/>
-            <obraz plik="dsc00810_www.jpg"/>
-            <obraz plik="dsc00821_www.jpg"/>
-            <obraz plik="dsc00822_www.jpg"/>
-            <obraz plik="dsc07658.jpg"/>
-            <obraz plik="dsc07683.jpg"/>
-            <obraz plik="dsc07710.jpg"/>
-            <obraz plik="dsc07721.jpg"/>
-            <obraz plik="dsc07742.jpg"/>
-            <obraz plik="dsc07764.jpg"/>
-            <obraz plik="dsc07816.jpg"/>
-            <obraz plik="dsc09340-2_www.jpg"/>
-            <obraz plik="dsc09344_www.jpg"/>
-            <obraz plik="dsc09380_www.jpg"/>
-            <obraz plik="dsc09446_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Mazowsze" katalog="mazowsze">
-            <obraz plik="dsc00728_www.jpg"/>
-            <obraz plik="dsc00741_www.jpg"/>
-            <obraz plik="dsc07046.jpg"/>
-            <obraz plik="dsc07498.jpg"/>
-            <obraz plik="dsc07541.jpg"/>
-        </galeria>
-        <galeria nazwa="Bałtyk" katalog="baltyk">
-            <obraz plik="dsc08724_www.jpg"/>
-            <obraz plik="dsc08746_www.jpg"/>
-            <obraz plik="dsc08756_www.jpg"/>
-            <obraz plik="dsc08931_www.jpg"/>
-            <obraz plik="dsc08942_www.jpg"/>
-            <obraz plik="dsc08943-1_www.jpg"/>
-        </galeria>
-        <galeria katalog="rowy" nazwa="Słowiński Park Narodowy">
-            <obraz plik="dsc02538_www.jpg"/>
-            <obraz plik="dsc02555_www.jpg"/>
-            <obraz plik="dsc02563_www.jpg"/>
-            <obraz plik="dsc02578-1_www.jpg"/>
-            <obraz plik="dsc02592-2_www.jpg"/>
-            <obraz plik="dsc02600_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Wisła" katalog="wisla">
-            <obraz plik="dsc01973_www.jpg"/>
-            <obraz plik="dsc01986-1_www.jpg"/>
-            <obraz plik="dsc01988_www.jpg"/>
-            <obraz plik="dsc01994-1_www.jpg"/>
-            <obraz plik="dsc02314_www.jpg"/>
-            <obraz plik="dsc02315_www.jpg"/>
-            <obraz plik="dsc02330_www.jpg"/>
-            <obraz plik="dsc02336_www.jpg"/>
-            <obraz plik="dsc02337_www.jpg"/>
-            <obraz plik="dsc02353_www.jpg"/>
-            <obraz plik="dsc02370_www.jpg"/>
-            <obraz plik="dsc02374_www.jpg"/>
-            <obraz plik="dsc02378-1_www.jpg"/>
-            <obraz plik="dsc02384-1_www.jpg"/>
-            <obraz plik="dsc02388-1_www.jpg"/>
-            <obraz plik="dsc02392_www.jpg"/>
-            <obraz plik="dsc06992.jpg"/>
-            <obraz plik="dsc07003.jpg"/>
-            <obraz plik="dsc07072.jpg"/>
-            <obraz plik="dsc07208.jpg"/>
-            <obraz plik="dsc07234.jpg"/>
-            <obraz plik="dsc07243.jpg"/>
-            <obraz plik="dsc07533.jpg"/>
-            <obraz plik="dsc09513_www.jpg"/>
-            <obraz plik="dsc09519_www.jpg"/>
-            <obraz plik="dsc09527.jpg"/>
-            <obraz plik="dsc09533_www.jpg"/>
-            <obraz plik="dsc09539-2_www.jpg"/>
-            <obraz plik="dsc09558-4_www.jpg"/>
-            <obraz plik="dsc09563_www.jpg"/>
-            <obraz plik="secymin_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Łaki i pola" katalog="lakiPola">
-            <obraz plik="dsc00661.jpg"/>
-            <obraz plik="dsc006641.jpg"/>
-            <obraz plik="dsc00926.jpg"/>
-            <obraz plik="dsc00936.jpg"/>
-            <obraz plik="dsc01093.jpg"/>
-            <obraz plik="dsc010941.jpg"/>
-            <obraz plik="dsc08146-4-m_www.jpg"/>
-            <obraz plik="dsc08213_www.jpg"/>
-            <obraz plik="dsc08224-1_www.jpg"/>
-            <obraz plik="dsc08245_www.jpg"/>
-            <obraz plik="dsc08253_www.jpg"/>
-            <obraz plik="dsc08299_www.jpg"/>
-            <obraz plik="dsc08405_www.jpg"/>
-            <obraz plik="dsc08424_www.jpg"/>
-            <obraz plik="dsc08434-1_www.jpg"/>
-            <obraz plik="dsc08437_www.jpg"/>
-            <obraz plik="dsc08570_www.jpg"/>
-            <obraz plik="dsc08949_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Suwalszczyzna" katalog="suwalszczyzna">
-            <obraz plik="dsc00581_www.jpg"/>
-            <obraz plik="dsc00605-www.jpg"/>
-            <obraz plik="dsc00609-www.jpg"/>
-            <obraz plik="dsc00618-1-www.jpg"/>
-            <obraz plik="dsc00620_www.jpg"/>
-            <obraz plik="dsc00640_www.jpg"/>
-            <obraz plik="dsc00648_www.jpg"/>
-            <obraz plik="dsc00659_www.jpg"/>
-            <obraz plik="dsc00666_www.jpg"/>
-            <obraz plik="dsc00672_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Bieszczady" katalog="bieszczady">
-            <obraz plik="dsc09076_www.jpg"/>
-            <obraz plik="dsc09092_www.jpg"/>
-            <obraz plik="dsc09100_www.jpg"/>
-            <obraz plik="dsc09111_www.jpg"/>
-            <obraz plik="dsc09148-1_www.jpg"/>
-            <obraz plik="dsc09174_www.jpg"/>
-            <obraz plik="dsc09186_www.jpg"/>
-            <obraz plik="dsc09312_www.jpg"/>
-            <obraz plik="dsc09323_miniatura_www.jpg"/>
-            <obraz plik="dsc09328_www.jpg"/>
-            <obraz plik="dsc09330_www.jpg"/>
-        </galeria>
-    </kategoria>
-    <kategoria nazwa="Natura" katalog="natura">
-        <galeria nazwa="Kwiaty" katalog="kwiaty">
-            <obraz plik="100_1552.jpg"/>
-            <obraz plik="100_1556.jpg"/>
-            <obraz plik="dsc00433.jpg"/>
-            <obraz plik="dsc00625.jpg"/>
-        </galeria>
-    </kategoria>
-    <kategoria nazwa="Miejsca dalekie i bliskie" katalog="miejscaDalekieIBliskie">
-        <galeria nazwa="Stare Jabłonki" katalog="stareJablonki-Ostroda">
-            <obraz plik="dsc00325_www.jpg"/>
-            <obraz plik="dsc00351-www.jpg"/>
-            <obraz plik="dsc00369_www.jpg"/>
-            <obraz plik="dsc00371-www.jpg"/>
-            <obraz plik="dsc00375-www.jpg"/>
-            <obraz plik="dsc00386-www.jpg"/>
-            <obraz plik="dsc00388-www.jpg"/>
-            <obraz plik="dsc00395-www.jpg"/>
-            <obraz plik="dsc00411-www.jpg"/>
-            <obraz plik="dsc00420-www.jpg"/>
-            <obraz plik="dsc00465-1-www.jpg"/>
-            <obraz plik="dsc00478-www.jpg"/>
-            <obraz plik="dsc00482-www.jpg"/>
-            <obraz plik="dsc00494-www.jpg"/>
-            <obraz plik="dsc00501-www.jpg"/>
-            <obraz plik="dsc00516-www.jpg"/>
-            <obraz plik="dsc00517-www.jpg"/>
-            <obraz plik="dsc00522-www.jpg"/>
-            <obraz plik="dsc00541-www.jpg"/>
-            <obraz plik="dsc00543-www.jpg"/>
-            <obraz plik="dsc02329.jpg"/>
-            <obraz plik="dsc02379.jpg"/>
-            <obraz plik="dsc02440.jpg"/>
-            <obraz plik="dsc02488.jpg"/>
-            <obraz plik="dsc02652.jpg"/>
-            <obraz plik="dsc02667.jpg"/>
-            <obraz plik="dsc02691.jpg"/>
-            <obraz plik="dsc02692.jpg"/>
-            <obraz plik="dsc02698.jpg"/>
-            <obraz plik="dsc02701.jpg"/>
-            <obraz plik="dsc02724.jpg"/>
-            <obraz plik="dsc02726.jpg"/>
-            <obraz plik="dsc02734.jpg"/>
-            <obraz plik="dsc02843.jpg"/>
-            <obraz plik="dsc02855.jpg"/>
-            <obraz plik="dsc02871.jpg"/>
-            <obraz plik="dsc02944.jpg"/>
-            <obraz plik="dsc02960.jpg"/>
-            <obraz plik="dsc02969.jpg"/>
-            <obraz plik="dsc02980.jpg"/>
-            <obraz plik="dsc03086.jpg"/>
-            <obraz plik="dsc03098.jpg"/>
-            <obraz plik="malySzelangPoBurzy.jpg"/>
-            <obraz plik="malySzelangRankiem.jpg"/>
-            <obraz plik="ostrodaMoloNoca.jpg"/>
-            <obraz plik="szelagOdStronyAndersa.jpg"/>
-            <obraz plik="szelagOdStronyAndersaRankiem.jpg"/>
-        </galeria>
-        <galeria nazwa="Mazowsze" katalog="mazowsze">
-            <obraz plik="dsc07306.jpg"/>
-            <obraz plik="dsc07275.jpg"/>
-            <obraz plik="dsc07081.jpg"/>
-            <obraz plik="dsc07237.jpg"/>
-            <obraz plik="dsc07242.jpg"/>
-        </galeria>
-        <galeria nazwa="Słupno" katalog="slupno">
-            <obraz plik="dsc002751.jpg"/>
-            <obraz plik="dsc00335.jpg"/>
-            <obraz plik="dsc00370.jpg"/>
-            <obraz plik="dsc00437.jpg"/>
-            <obraz plik="dsc00661.jpg"/>
-            <obraz plik="dsc00825.jpg"/>
-            <obraz plik="dsc00847.jpg"/>
-            <obraz plik="dsc00855.jpg"/>
-            <obraz plik="dsc00860.jpg"/>
-            <obraz plik="dsc00926.jpg"/>
-            <obraz plik="dsc00936.jpg"/>
-            <obraz plik="dsc01088.jpg"/>
-            <obraz plik="dsc01093.jpg"/>
-            <obraz plik="dsc010941.jpg"/>
-            <obraz plik="dsc011101.jpg"/>
-            <obraz plik="dsc01119.jpg"/>
-            <obraz plik="dsc011281.jpg"/>
-            <obraz plik="dsc01609.jpg"/>
-            <obraz plik="dsc01611.jpg"/>
-            <obraz plik="dsc03636.jpg"/>
-            <obraz plik="dsc03644.jpg"/>
-            <obraz plik="dsc03663.jpg"/>
-            <obraz plik="dsc03665.jpg"/>
-            <obraz plik="dsc03833.jpg"/>
-            <obraz plik="dsc03843.jpg"/>
-        </galeria>
-        <galeria nazwa="Pomorze Zachodnie" katalog="pomorzeZachodnie">
-            <obraz plik="dsc08662_www.jpg"/>
-            <obraz plik="dsc08668_www.jpg"/>
-            <obraz plik="dsc08682_www.jpg"/>
-            <obraz plik="dsc08734_www.jpg"/>
-            <obraz plik="dsc08735_www.jpg"/>
-            <obraz plik="dsc08752-1_www.jpg"/>
-            <obraz plik="dsc08768_www.jpg"/>
-            <obraz plik="dsc08789_www.jpg"/>
-            <obraz plik="dsc08806_www.jpg"/>
-            <obraz plik="dsc08813_www.jpg"/>
-            <obraz plik="dsc08816_wwww.jpg"/>
-            <obraz plik="dsc08820_www.jpg"/>
-            <obraz plik="dsc08851_www.jpg"/>
-            <obraz plik="dsc08860_www.jpg"/>
-            <obraz plik="dsc08862_www.jpg"/>
-            <obraz plik="dsc08869_www.jpg"/>
-            <obraz plik="dsc08880_www.jpg"/>
-            <obraz plik="dsc08890_www.jpg"/>
-            <obraz plik="dsc08905_www.jpg"/>
-            <obraz plik="dsc08918_www.jpg"/>
-            <obraz plik="dsc08927_www.jpg"/>
-            <obraz plik="dsc08932_www.jpg"/>
-            <obraz plik="dsc08943-1_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Suwalszczyzna" katalog="suwalszczyzna">
-            <obraz plik="dsc00581_www.jpg"/>
-            <obraz plik="dsc00597-1-www.jpg"/>
-            <obraz plik="dsc00613-www.jpg"/>
-            <obraz plik="dsc00618-1-www.jpg"/>
-            <obraz plik="dsc00622_www.jpg"/>
-            <obraz plik="dsc00623_www.jpg"/>
-            <obraz plik="dsc00630_www.jpg"/>
-            <obraz plik="dsc00631_www.jpg"/>
-            <obraz plik="dsc00644_www.jpg"/>
-            <obraz plik="dsc00652_www.jpg"/>
-            <obraz plik="dsc00663_www.jpg"/>
-            <obraz plik="dsc00665_www.jpg"/>
-            <obraz plik="dsc00667_www.jpg"/>
-            <obraz plik="dsc00668_www.jpg"/>
-            <obraz plik="dsc00678_www.jpg"/>
-            <obraz plik="dsc00679_www.jpg"/>
-            <obraz plik="dsc00683_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Bieszczady" katalog="bieszczady">
-            <obraz plik="dsc09082_www.jpg"/>
-            <obraz plik="dsc09083_www.jpg"/>
-            <obraz plik="dsc09107_www.jpg"/>
-            <obraz plik="dsc09112_www.jpg"/>
-            <obraz plik="dsc09123_www.jpg"/>
-            <obraz plik="dsc09127_www.jpg"/>
-            <obraz plik="dsc09159_www.jpg"/>
-            <obraz plik="dsc09182_www.jpg"/>
-            <obraz plik="dsc09183_miniatura_www.jpg"/>
-            <obraz plik="dsc09193_www.jpg"/>
-            <obraz plik="dsc09206_www.jpg"/>
-            <obraz plik="dsc09245_www.jpg"/>
-            <obraz plik="dsc09251_www.jpg"/>
-            <obraz plik="dsc09254-1_www.jpg"/>
-            <obraz plik="dsc09283_www.jpg"/>
-            <obraz plik="dsc09312_www.jpg"/>
-            <obraz plik="dsc09323_miniatura_www.jpg"/>
-            <obraz plik="dsc09328_www.jpg"/>
-            <obraz plik="dsc09329_www.jpg"/>
-            <obraz plik="dsc09330_www.jpg"/>
-            <obraz plik="dsc09331_www.jpg"/>
-            <obraz plik="dsc09335_www.jpg"/>
-        </galeria>
-    </kategoria>
-    <kategoria nazwa="Portrety" katalog="portrety">
-        <galeria nazwa="Zosia" katalog="Zosia">
-            <obraz plik="dsc00479_www.jpg"/>
-            <obraz plik="dsc00480_www.jpg"/>
-            <obraz plik="dsc00489_www.jpg"/>
-        </galeria>
-        <galeria nazwa="Jaś" katalog="Jas">
-            <obraz plik="dsc00235.jpg"/>
-            <obraz plik="dsc00392.jpg"/>
-            <obraz plik="dsc00394.jpg"/>
-            <obraz plik="dsc00407.jpg"/>
-            <obraz plik="dsc00414.jpg"/>
-            <obraz plik="dsc00983.jpg"/>
-            <obraz plik="dsc01087.jpg"/>
-            <obraz plik="dsc01118.jpg"/>
-            <obraz plik="dsc01172.jpg"/>
-            <obraz plik="dsc01864.jpg"/>
-            <obraz plik="dsc02885.jpg"/>
-            <obraz plik="dsc03414.jpg"/>
-            <obraz plik="dsc06454.jpg"/>
-            <obraz plik="dsc06713.jpg"/>
-            <obraz plik="www-zakopaneZlozenie.jpg"/>
-            <obraz plik="zabawaGlupem.jpg"/>
-        </galeria>
-        <galeria nazwa="Rodzina" katalog="rodzina">
-            <obraz plik="opowiescWigilijna.jpg"/>
-            <obraz plik="wigilia-2008-1.jpg"/>
-            <obraz plik="wigilia-2008-2.jpg"/>
-        </galeria>
-        <galeria nazwa="Magda" katalog="Magda">
-            <obraz plik="dsc007691.jpg"/>
-            <obraz plik="magda-2009.jpg"/>
-        </galeria>
-        <galeria nazwa="Jaś - sztuczka" katalog="jas-pilka">
-            <obrazek nazwa="dsc02632_www.jpg"/>
-            <obrazek nazwa="dsc02647_www.jpg"/>
-            <obrazek nazwa="dsc02676_www.jpg"/>
-            <obrazek nazwa="dsc02710_www.jpg"/>
-            <obrazek nazwa="dsc02714_www.jpg"/>
-        </galeria>
-    </kategoria>
+  <kategoria nazwa="Portrety" katalog="portrety">
+    <galeria nazwa="Zosia" katalog="Zosia">
+      <obraz plik="dsc00479_www.jpg"/>
+      <obraz plik="dsc00480_www.jpg"/>
+      <obraz plik="dsc00489_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Jaś" katalog="Jas">
+      <obraz plik="dsc00235.jpg"/>
+      <obraz plik="dsc00392.jpg"/>
+      <obraz plik="dsc00394.jpg"/>
+      <obraz plik="dsc00407.jpg"/>
+      <obraz plik="dsc00414.jpg"/>
+      <obraz plik="dsc00983.jpg"/>
+      <obraz plik="dsc01087.jpg"/>
+      <obraz plik="dsc01118.jpg"/>
+      <obraz plik="dsc01172.jpg"/>
+      <obraz plik="dsc01864.jpg"/>
+      <obraz plik="dsc02885.jpg"/>
+      <obraz plik="dsc03414.jpg"/>
+      <obraz plik="dsc06454.jpg"/>
+      <obraz plik="dsc06713.jpg"/>
+      <obraz plik="www-zakopaneZlozenie.jpg"/>
+      <obraz plik="zabawaGlupem.jpg"/>
+    </galeria>
+    <galeria nazwa="Rodzina" katalog="rodzina">
+      <obraz plik="opowiescWigilijna.jpg"/>
+      <obraz plik="wigilia-2008-1.jpg"/>
+      <obraz plik="wigilia-2008-2.jpg"/>
+    </galeria>
+    <galeria nazwa="Magda" katalog="Magda">
+      <obraz plik="dsc007691.jpg"/>
+      <obraz plik="magda-2009.jpg"/>
+    </galeria>
+    <galeria nazwa="Jaś - sztuczka" katalog="jas-pilka">
+      <obraz plik="dsc02632_www.jpg"/>
+      <obraz plik="dsc02647_www.jpg"/>
+      <obraz plik="dsc02676_www.jpg"/>
+      <obraz plik="dsc02710_www.jpg"/>
+      <obraz plik="dsc02714_www.jpg"/>
+    </galeria>
+  </kategoria>
+  <kategoria nazwa="Miejsca dalekie i bliskie" katalog="miejscaDalekieIBliskie">
+    <galeria nazwa="Stare Jabłonki" katalog="stareJablonki-Ostroda">
+      <obraz plik="dsc00325_www.jpg"/>
+      <obraz plik="dsc00351-www.jpg"/>
+      <obraz plik="dsc00369_www.jpg"/>
+      <obraz plik="dsc00371-www.jpg"/>
+      <obraz plik="dsc00375-www.jpg"/>
+      <obraz plik="dsc00386-www.jpg"/>
+      <obraz plik="dsc00388-www.jpg"/>
+      <obraz plik="dsc00395-www.jpg"/>
+      <obraz plik="dsc00411-www.jpg"/>
+      <obraz plik="dsc00420-www.jpg"/>
+      <obraz plik="dsc00465-1-www.jpg"/>
+      <obraz plik="dsc00478-www.jpg"/>
+      <obraz plik="dsc00482-www.jpg"/>
+      <obraz plik="dsc00494-www.jpg"/>
+      <obraz plik="dsc00501-www.jpg"/>
+      <obraz plik="dsc00516-www.jpg"/>
+      <obraz plik="dsc00517-www.jpg"/>
+      <obraz plik="dsc00522-www.jpg"/>
+      <obraz plik="dsc00541-www.jpg"/>
+      <obraz plik="dsc00543-www.jpg"/>
+      <obraz plik="dsc02329.jpg"/>
+      <obraz plik="dsc02379.jpg"/>
+      <obraz plik="dsc02440.jpg"/>
+      <obraz plik="dsc02488.jpg"/>
+      <obraz plik="dsc02652.jpg"/>
+      <obraz plik="dsc02667.jpg"/>
+      <obraz plik="dsc02691.jpg"/>
+      <obraz plik="dsc02692.jpg"/>
+      <obraz plik="dsc02698.jpg"/>
+      <obraz plik="dsc02701.jpg"/>
+      <obraz plik="dsc02724.jpg"/>
+      <obraz plik="dsc02726.jpg"/>
+      <obraz plik="dsc02734.jpg"/>
+      <obraz plik="dsc02843.jpg"/>
+      <obraz plik="dsc02855.jpg"/>
+      <obraz plik="dsc02871.jpg"/>
+      <obraz plik="dsc02944.jpg"/>
+      <obraz plik="dsc02960.jpg"/>
+      <obraz plik="dsc02969.jpg"/>
+      <obraz plik="dsc02980.jpg"/>
+      <obraz plik="dsc03086.jpg"/>
+      <obraz plik="dsc03098.jpg"/>
+      <obraz plik="malySzelangPoBurzy.jpg"/>
+      <obraz plik="malySzelangRankiem.jpg"/>
+      <obraz plik="ostrodaMoloNoca.jpg"/>
+      <obraz plik="szelagOdStronyAndersa.jpg"/>
+      <obraz plik="szelagOdStronyAndersaRankiem.jpg"/>
+    </galeria>
+    <galeria nazwa="Mazowsze" katalog="mazowsze">
+      <obraz plik="dsc07306.jpg"/>
+      <obraz plik="dsc07275.jpg"/>
+      <obraz plik="dsc07081.jpg"/>
+      <obraz plik="dsc07237.jpg"/>
+      <obraz plik="dsc07242.jpg"/>
+    </galeria>
+    <galeria nazwa="Słupno" katalog="slupno">
+      <obraz plik="dsc002751.jpg"/>
+      <obraz plik="dsc00335.jpg"/>
+      <obraz plik="dsc00370.jpg"/>
+      <obraz plik="dsc00437.jpg"/>
+      <obraz plik="dsc00661.jpg"/>
+      <obraz plik="dsc00825.jpg"/>
+      <obraz plik="dsc00847.jpg"/>
+      <obraz plik="dsc00855.jpg"/>
+      <obraz plik="dsc00860.jpg"/>
+      <obraz plik="dsc00926.jpg"/>
+      <obraz plik="dsc00936.jpg"/>
+      <obraz plik="dsc01088.jpg"/>
+      <obraz plik="dsc01093.jpg"/>
+      <obraz plik="dsc010941.jpg"/>
+      <obraz plik="dsc011101.jpg"/>
+      <obraz plik="dsc01119.jpg"/>
+      <obraz plik="dsc011281.jpg"/>
+      <obraz plik="dsc01609.jpg"/>
+      <obraz plik="dsc01611.jpg"/>
+      <obraz plik="dsc03636.jpg"/>
+      <obraz plik="dsc03644.jpg"/>
+      <obraz plik="dsc03663.jpg"/>
+      <obraz plik="dsc03665.jpg"/>
+      <obraz plik="dsc03833.jpg"/>
+      <obraz plik="dsc03843.jpg"/>
+    </galeria>
+    <galeria nazwa="Pomorze Zachodnie" katalog="pomorzeZachodnie">
+      <obraz plik="dsc08662_www.jpg"/>
+      <obraz plik="dsc08668_www.jpg"/>
+      <obraz plik="dsc08682_www.jpg"/>
+      <obraz plik="dsc08734_www.jpg"/>
+      <obraz plik="dsc08735_www.jpg"/>
+      <obraz plik="dsc08752-1_www.jpg"/>
+      <obraz plik="dsc08768_www.jpg"/>
+      <obraz plik="dsc08789_www.jpg"/>
+      <obraz plik="dsc08806_www.jpg"/>
+      <obraz plik="dsc08813_www.jpg"/>
+      <obraz plik="dsc08816_wwww.jpg"/>
+      <obraz plik="dsc08820_www.jpg"/>
+      <obraz plik="dsc08851_www.jpg"/>
+      <obraz plik="dsc08860_www.jpg"/>
+      <obraz plik="dsc08862_www.jpg"/>
+      <obraz plik="dsc08869_www.jpg"/>
+      <obraz plik="dsc08880_www.jpg"/>
+      <obraz plik="dsc08890_www.jpg"/>
+      <obraz plik="dsc08905_www.jpg"/>
+      <obraz plik="dsc08918_www.jpg"/>
+      <obraz plik="dsc08927_www.jpg"/>
+      <obraz plik="dsc08932_www.jpg"/>
+      <obraz plik="dsc08943-1_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Suwalszczyzna" katalog="suwalszczyzna">
+      <obraz plik="dsc00581_www.jpg"/>
+      <obraz plik="dsc00597-1-www.jpg"/>
+      <obraz plik="dsc00613-www.jpg"/>
+      <obraz plik="dsc00618-1-www.jpg"/>
+      <obraz plik="dsc00622_www.jpg"/>
+      <obraz plik="dsc00623_www.jpg"/>
+      <obraz plik="dsc00630_www.jpg"/>
+      <obraz plik="dsc00631_www.jpg"/>
+      <obraz plik="dsc00644_www.jpg"/>
+      <obraz plik="dsc00652_www.jpg"/>
+      <obraz plik="dsc00663_www.jpg"/>
+      <obraz plik="dsc00665_www.jpg"/>
+      <obraz plik="dsc00667_www.jpg"/>
+      <obraz plik="dsc00668_www.jpg"/>
+      <obraz plik="dsc00678_www.jpg"/>
+      <obraz plik="dsc00679_www.jpg"/>
+      <obraz plik="dsc00683_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Bieszczady" katalog="bieszczady">
+      <obraz plik="dsc09082_www.jpg"/>
+      <obraz plik="dsc09083_www.jpg"/>
+      <obraz plik="dsc09107_www.jpg"/>
+      <obraz plik="dsc09112_www.jpg"/>
+      <obraz plik="dsc09123_www.jpg"/>
+      <obraz plik="dsc09127_www.jpg"/>
+      <obraz plik="dsc09159_www.jpg"/>
+      <obraz plik="dsc09182_www.jpg"/>
+      <obraz plik="dsc09183_miniatura_www.jpg"/>
+      <obraz plik="dsc09193_www.jpg"/>
+      <obraz plik="dsc09206_www.jpg"/>
+      <obraz plik="dsc09245_www.jpg"/>
+      <obraz plik="dsc09251_www.jpg"/>
+      <obraz plik="dsc09254-1_www.jpg"/>
+      <obraz plik="dsc09283_www.jpg"/>
+      <obraz plik="dsc09312_www.jpg"/>
+      <obraz plik="dsc09323_miniatura_www.jpg"/>
+      <obraz plik="dsc09328_www.jpg"/>
+      <obraz plik="dsc09329_www.jpg"/>
+      <obraz plik="dsc09330_www.jpg"/>
+      <obraz plik="dsc09331_www.jpg"/>
+      <obraz plik="dsc09335_www.jpg"/>
+    </galeria>
+  </kategoria>
+  <kategoria nazwa="Martwa natura" katalog="martwaNatura">
+    <galeria nazwa="Stare maszyny" katalog="stareMaszyny">
+      <obraz plik="dsc01072.jpg"/>
+      <obraz plik="dsc01438.jpg"/>
+      <obraz plik="dsc01455.jpg"/>
+      <obraz plik="dsc01470.jpg"/>
+      <obraz plik="dsc01528.jpg"/>
+      <obraz plik="dsc01530.jpg"/>
+      <obraz plik="dsc01532.jpg"/>
+      <obraz plik="dsc01551.jpg"/>
+    </galeria>
+    <galeria nazwa="Graffiti" katalog="graffitiSluzew">
+      <obraz plik="dsc01006.jpg"/>
+      <obraz plik="dsc01007.jpg"/>
+      <obraz plik="dsc01010.jpg"/>
+      <obraz plik="dsc01011.jpg"/>
+      <obraz plik="dsc01019.jpg"/>
+      <obraz plik="dsc01021.jpg"/>
+      <obraz plik="dsc01022.jpg"/>
+      <obraz plik="dsc01023.jpg"/>
+      <obraz plik="dsc01024.jpg"/>
+      <obraz plik="dsc01026.jpg"/>
+      <obraz plik="dsc01031.jpg"/>
+      <obraz plik="dsc01035.jpg"/>
+      <obraz plik="dsc01038.jpg"/>
+      <obraz plik="dsc01040.jpg"/>
+      <obraz plik="dsc01045.jpg"/>
+      <obraz plik="dsc01046.jpg"/>
+      <obraz plik="dsc01048.jpg"/>
+      <obraz plik="dsc01049.jpg"/>
+    </galeria>
+    <galeria nazwa="Zwyczajne niezwyczajne" katalog="zwyczajneNiezwyczajne">
+      <obraz plik="dsc00415.jpg"/>
+      <obraz plik="dsc00516.jpg"/>
+      <obraz plik="dsc00616.jpg"/>
+    </galeria>
+    <galeria nazwa="Aranżacje" katalog="aranzacje">
+      <obraz plik="dsc00554.jpg"/>
+      <obraz plik="dsc00754.jpg"/>
+    </galeria>
+  </kategoria>
+  <kategoria nazwa="Nasze miasto" katalog="naszeMiasto">
+    <galeria nazwa="Szmulowizna" katalog="szmulowizna">
+      <obraz plik="dsc00784.jpg"/>
+      <obraz plik="dsc00795.jpg"/>
+      <obraz plik="dsc00802.jpg"/>
+      <obraz plik="dsc00809.jpg"/>
+      <obraz plik="dsc00816.jpg"/>
+      <obraz plik="dsc00818.jpg"/>
+      <obraz plik="dsc00824.jpg"/>
+      <obraz plik="dsc00835.jpg"/>
+      <obraz plik="dsc00842.jpg"/>
+      <obraz plik="dsc00856.jpg"/>
+      <obraz plik="dsc00874.jpg"/>
+      <obraz plik="dsc00893.jpg"/>
+      <obraz plik="dsc00905.jpg"/>
+      <obraz plik="dsc00906.jpg"/>
+      <obraz plik="dsc00910.jpg"/>
+    </galeria>
+    <galeria nazwa="Warszawa w obiektywie" katalog="warszawaWObiektywie">
+      <obraz plik="dsc01742.jpg"/>
+      <obraz plik="dsc02016.jpg"/>
+      <obraz plik="dsc02017.jpg"/>
+      <obraz plik="dsc06840.jpg"/>
+      <obraz plik="dsc06845-1.jpg"/>
+      <obraz plik="dsc06865.jpg"/>
+      <obraz plik="dsc06868.jpg"/>
+      <obraz plik="dsc06869.jpg"/>
+      <obraz plik="dsc06873.jpg"/>
+      <obraz plik="dsc06882.jpg"/>
+      <obraz plik="dsc06986.jpg"/>
+      <obraz plik="dsc07138.jpg"/>
+      <obraz plik="wilanowPalac.jpg"/>
+    </galeria>
+    <galeria nazwa="Warszawskie mosty" katalog="warszawskieMosty">
+      <obraz plik="dsc04367.jpg"/>
+      <obraz plik="dsc04401.jpg"/>
+      <obraz plik="dsc04416.jpg"/>
+      <obraz plik="dsc04424.jpg"/>
+      <obraz plik="dsc04426.jpg"/>
+      <obraz plik="dsc04433.jpg"/>
+      <obraz plik="dsc04444.jpg"/>
+      <obraz plik="dsc04448.jpg"/>
+      <obraz plik="dsc04461.jpg"/>
+      <obraz plik="dsc04490.jpg"/>
+      <obraz plik="dsc04501.jpg"/>
+      <obraz plik="dsc04506.jpg"/>
+      <obraz plik="dsc04623.jpg"/>
+      <obraz plik="dsc04624.jpg"/>
+      <obraz plik="dsc04630.jpg"/>
+      <obraz plik="dsc04633.jpg"/>
+      <obraz plik="dsc04641.jpg"/>
+      <obraz plik="dsc04646.jpg"/>
+    </galeria>
+    <galeria nazwa="Łazienki" katalog="lazienki">
+      <obraz plik="dsc00643.jpg"/>
+      <obraz plik="dsc00650.jpg"/>
+      <obraz plik="dsc00654.jpg"/>
+      <obraz plik="dsc00659.jpg"/>
+      <obraz plik="dsc00661.jpg"/>
+      <obraz plik="dsc00664.jpg"/>
+      <obraz plik="dsc00666.jpg"/>
+      <obraz plik="dsc00669.jpg"/>
+      <obraz plik="dsc00671.jpg"/>
+      <obraz plik="dsc00682.jpg"/>
+      <obraz plik="dsc00687.jpg"/>
+      <obraz plik="dsc00689.jpg"/>
+      <obraz plik="dsc00690.jpg"/>
+    </galeria>
+    <galeria nazwa="Starówka" katalog="starowkaWarszawa">
+      <obraz plik="dsc03203.jpg"/>
+      <obraz plik="dsc04653.jpg"/>
+      <obraz plik="dsc05133.jpg"/>
+      <obraz plik="dsc05138.jpg"/>
+      <obraz plik="dsc05151.jpg"/>
+      <obraz plik="dsc05157.jpg"/>
+      <obraz plik="dsc05173.jpg"/>
+      <obraz plik="dsc05174.jpg"/>
+      <obraz plik="dsc05651.jpg"/>
+      <obraz plik="dsc05673.jpg"/>
+      <obraz plik="dsc05688.jpg"/>
+      <obraz plik="dsc05714.jpg"/>
+      <obraz plik="dsc05715.jpg"/>
+      <obraz plik="placZamkowy.jpg"/>
+    </galeria>
+    <galeria nazwa="Jesień" katalog="jesien">
+      <obraz plik="dsc03994.jpg"/>
+      <obraz plik="dsc03996.jpg"/>
+      <obraz plik="dsc03997.jpg"/>
+      <obraz plik="dsc04002.jpg"/>
+      <obraz plik="dsc04003.jpg"/>
+      <obraz plik="dsc04004.jpg"/>
+      <obraz plik="dsc04006.jpg"/>
+      <obraz plik="dsc04009.jpg"/>
+      <obraz plik="dsc04021.jpg"/>
+    </galeria>
+    <galeria nazwa="Warszawskie ulice" katalog="warszawskieUlice">
+      <obraz plik="trabka_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Powązki" katalog="powazkiCmWojskowy">
+      <obraz plik="dsc04531.jpg"/>
+      <obraz plik="dsc04542.jpg"/>
+      <obraz plik="dsc04546.jpg"/>
+      <obraz plik="dsc04548.jpg"/>
+      <obraz plik="dsc04551.jpg"/>
+      <obraz plik="dsc04555.jpg"/>
+      <obraz plik="dsc04568.jpg"/>
+      <obraz plik="dsc04579.jpg"/>
+      <obraz plik="dsc04583.jpg"/>
+      <obraz plik="dsc04597.jpg"/>
+      <obraz plik="dsc04598.jpg"/>
+      <obraz plik="dsc04600.jpg"/>
+      <obraz plik="dsc04603.jpg"/>
+    </galeria>
+  </kategoria>
+  <kategoria nazwa="Przyroda" katalog="przyroda">
+    <galeria nazwa="Pieniny" katalog="pieniny">
+      <obraz plik="dsc00792_www.jpg"/>
+      <obraz plik="dsc00827_www.jpg"/>
+      <obraz plik="dsc00833_www.jpg"/>
+      <obraz plik="dsc00841_www.jpg"/>
+      <obraz plik="dsc00843_www.jpg"/>
+    </galeria>
+    <galeria nazwa="KPN" katalog="kampinos">
+      <obraz plik="2009-10-dsc09452_www.jpg"/>
+      <obraz plik="dsc00246_www.jpg"/>
+      <obraz plik="dsc00249_www.jpg"/>
+      <obraz plik="dsc00250_www.jpg"/>
+      <obraz plik="dsc00279_www.jpg"/>
+      <obraz plik="dsc00288_www.jpg"/>
+      <obraz plik="dsc00295_www.jpg"/>
+      <obraz plik="dsc00687-2_www.jpg"/>
+      <obraz plik="dsc00689_www.jpg"/>
+      <obraz plik="dsc00697_www.jpg"/>
+      <obraz plik="dsc00703_www.jpg"/>
+      <obraz plik="dsc00754_www.jpg"/>
+      <obraz plik="dsc00778_www.jpg"/>
+      <obraz plik="dsc00782_www.jpg"/>
+      <obraz plik="dsc00792_www.jpg"/>
+      <obraz plik="dsc00801_www.jpg"/>
+      <obraz plik="dsc00810_www.jpg"/>
+      <obraz plik="dsc00821_www.jpg"/>
+      <obraz plik="dsc00822_www.jpg"/>
+      <obraz plik="dsc07658.jpg"/>
+      <obraz plik="dsc07683.jpg"/>
+      <obraz plik="dsc07710.jpg"/>
+      <obraz plik="dsc07721.jpg"/>
+      <obraz plik="dsc07742.jpg"/>
+      <obraz plik="dsc07764.jpg"/>
+      <obraz plik="dsc07816.jpg"/>
+      <obraz plik="dsc09340-2_www.jpg"/>
+      <obraz plik="dsc09344_www.jpg"/>
+      <obraz plik="dsc09380_www.jpg"/>
+      <obraz plik="dsc09446_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Mazowsze" katalog="mazowsze">
+      <obraz plik="dsc00728_www.jpg"/>
+      <obraz plik="dsc00741_www.jpg"/>
+      <obraz plik="dsc07046.jpg"/>
+      <obraz plik="dsc07498.jpg"/>
+      <obraz plik="dsc07541.jpg"/>
+    </galeria>
+    <galeria nazwa="Bałtyk" katalog="baltyk">
+      <obraz plik="dsc08724_www.jpg"/>
+      <obraz plik="dsc08746_www.jpg"/>
+      <obraz plik="dsc08756_www.jpg"/>
+      <obraz plik="dsc08931_www.jpg"/>
+      <obraz plik="dsc08942_www.jpg"/>
+      <obraz plik="dsc08943-1_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Słowiński Park Narodowy" katalog="rowy">
+      <obraz plik="dsc02538_www.jpg"/>
+      <obraz plik="dsc02555_www.jpg"/>
+      <obraz plik="dsc02563_www.jpg"/>
+      <obraz plik="dsc02578-1_www.jpg"/>
+      <obraz plik="dsc02592-2_www.jpg"/>
+      <obraz plik="dsc02600_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Wisła" katalog="wisla">
+      <obraz plik="dsc01973_www.jpg"/>
+      <obraz plik="dsc01986-1_www.jpg"/>
+      <obraz plik="dsc01988_www.jpg"/>
+      <obraz plik="dsc01994-1_www.jpg"/>
+      <obraz plik="dsc02314_www.jpg"/>
+      <obraz plik="dsc02315_www.jpg"/>
+      <obraz plik="dsc02330_www.jpg"/>
+      <obraz plik="dsc02337_www.jpg"/>
+      <obraz plik="dsc02353_www.jpg"/>
+      <obraz plik="dsc02370_www.jpg"/>
+      <obraz plik="dsc02374_www.jpg"/>
+      <obraz plik="dsc02378-1_www.jpg"/>
+      <obraz plik="dsc02384-1_www.jpg"/>
+      <obraz plik="dsc02388-1_www.jpg"/>
+      <obraz plik="dsc02392_www.jpg"/>
+      <obraz plik="dsc06992.jpg"/>
+      <obraz plik="dsc07003.jpg"/>
+      <obraz plik="dsc07072.jpg"/>
+      <obraz plik="dsc07208.jpg"/>
+      <obraz plik="dsc07234.jpg"/>
+      <obraz plik="dsc07243.jpg"/>
+      <obraz plik="dsc07533.jpg"/>
+      <obraz plik="dsc09513_www.jpg"/>
+      <obraz plik="dsc09519_www.jpg"/>
+      <obraz plik="dsc09527.jpg"/>
+      <obraz plik="dsc09533_www.jpg"/>
+      <obraz plik="dsc09539-2_www.jpg"/>
+      <obraz plik="dsc09558-4_www.jpg"/>
+      <obraz plik="dsc09563_www.jpg"/>
+      <obraz plik="secymin_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Łaki i pola" katalog="lakiPola">
+      <obraz plik="dsc00661.jpg"/>
+      <obraz plik="dsc006641.jpg"/>
+      <obraz plik="dsc00926.jpg"/>
+      <obraz plik="dsc00936.jpg"/>
+      <obraz plik="dsc01093.jpg"/>
+      <obraz plik="dsc010941.jpg"/>
+      <obraz plik="dsc08146-4-m_www.jpg"/>
+      <obraz plik="dsc08213_www.jpg"/>
+      <obraz plik="dsc08224-1_www.jpg"/>
+      <obraz plik="dsc08245_www.jpg"/>
+      <obraz plik="dsc08253_www.jpg"/>
+      <obraz plik="dsc08299_www.jpg"/>
+      <obraz plik="dsc08405_www.jpg"/>
+      <obraz plik="dsc08424_www.jpg"/>
+      <obraz plik="dsc08434-1_www.jpg"/>
+      <obraz plik="dsc08437_www.jpg"/>
+      <obraz plik="dsc08570_www.jpg"/>
+      <obraz plik="dsc08949_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Suwalszczyzna" katalog="suwalszczyzna">
+      <obraz plik="dsc00581_www.jpg"/>
+      <obraz plik="dsc00605-www.jpg"/>
+      <obraz plik="dsc00609-www.jpg"/>
+      <obraz plik="dsc00618-1-www.jpg"/>
+      <obraz plik="dsc00620_www.jpg"/>
+      <obraz plik="dsc00640_www.jpg"/>
+      <obraz plik="dsc00648_www.jpg"/>
+      <obraz plik="dsc00659_www.jpg"/>
+      <obraz plik="dsc00666_www.jpg"/>
+      <obraz plik="dsc00672_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Bieszczady" katalog="bieszczady">
+      <obraz plik="dsc09076_www.jpg"/>
+      <obraz plik="dsc09092_www.jpg"/>
+      <obraz plik="dsc09100_www.jpg"/>
+      <obraz plik="dsc09111_www.jpg"/>
+      <obraz plik="dsc09148-1_www.jpg"/>
+      <obraz plik="dsc09174_www.jpg"/>
+      <obraz plik="dsc09186_www.jpg"/>
+      <obraz plik="dsc09312_www.jpg"/>
+      <obraz plik="dsc09323_miniatura_www.jpg"/>
+      <obraz plik="dsc09328_www.jpg"/>
+      <obraz plik="dsc09330_www.jpg"/>
+    </galeria>
+  </kategoria>
+  <kategoria nazwa="Natura" katalog="natura">
+    <galeria nazwa="Kwiaty" katalog="kwiaty">
+      <obraz plik="100_1552.jpg"/>
+      <obraz plik="100_1556.jpg"/>
+      <obraz plik="dsc00433.jpg"/>
+      <obraz plik="dsc00625.jpg"/>
+    </galeria>
+  </kategoria>
+  <kategoria nazwa="Wydarzenia" katalog="wydarzenia">
+    <galeria nazwa="Sulejów 2008" katalog="sulejow2008">
+      <obraz plik="dsc00160.jpg"/>
+      <obraz plik="dsc00024.jpg"/>
+      <obraz plik="dsc00038.jpg"/>
+      <obraz plik="dsc000451.jpg"/>
+      <obraz plik="dsc000491.jpg"/>
+      <obraz plik="dsc00052.jpg"/>
+      <obraz plik="dsc000551.jpg"/>
+      <obraz plik="dsc000761.jpg"/>
+      <obraz plik="dsc00079.jpg"/>
+      <obraz plik="dsc00084.jpg"/>
+      <obraz plik="dsc000861.jpg"/>
+      <obraz plik="dsc000871.jpg"/>
+      <obraz plik="dsc000891.jpg"/>
+      <obraz plik="dsc00105.jpg"/>
+      <obraz plik="dsc00106.jpg"/>
+      <obraz plik="dsc00114.jpg"/>
+      <obraz plik="dsc00115.jpg"/>
+      <obraz plik="dsc00119.jpg"/>
+      <obraz plik="dsc00125.jpg"/>
+      <obraz plik="dsc001281.jpg"/>
+      <obraz plik="dsc001301.jpg"/>
+      <obraz plik="dsc001421.jpg"/>
+      <obraz plik="dsc00148.jpg"/>
+      <obraz plik="dsc00153.jpg"/>
+      <obraz plik="dsc00157.jpg"/>
+      <obraz plik="dsc001681.jpg"/>
+      <obraz plik="dsc00162.jpg"/>
+    </galeria>
+    <galeria nazwa="Wiosna w Słupnie" katalog="wiosnaWSlupnie">
+      <obraz plik="dsc00381.jpg"/>
+      <obraz plik="dsc00387.jpg"/>
+      <obraz plik="dsc00388.jpg"/>
+      <obraz plik="dsc00389.jpg"/>
+      <obraz plik="dsc00403.jpg"/>
+      <obraz plik="dsc00404.jpg"/>
+      <obraz plik="dsc00406.jpg"/>
+      <obraz plik="dsc00410.jpg"/>
+      <obraz plik="dsc00414.jpg"/>
+      <obraz plik="dsc00415.jpg"/>
+      <obraz plik="dsc00416.jpg"/>
+      <obraz plik="dsc00429.jpg"/>
+      <obraz plik="dsc00432.jpg"/>
+    </galeria>
+    <galeria nazwa="Święta 2008" katalog="swieta2008">
+      <obraz plik="DSC00219.jpg"/>
+      <obraz plik="DSC00224.jpg"/>
+      <obraz plik="DSC00226.jpg"/>
+      <obraz plik="DSC00231.jpg"/>
+      <obraz plik="DSC002361.jpg"/>
+      <obraz plik="DSC00260.jpg"/>
+      <obraz plik="dsc00144.jpg"/>
+    </galeria>
+    <galeria nazwa="Zakopane 2008" katalog="zakopane2008">
+      <obraz plik="dsc04068.jpg"/>
+      <obraz plik="dsc04113.jpg"/>
+      <obraz plik="dsc04118.jpg"/>
+      <obraz plik="dsc04126.jpg"/>
+      <obraz plik="dsc04142.jpg"/>
+      <obraz plik="dsc04240.jpg"/>
+      <obraz plik="dsc04251.jpg"/>
+      <obraz plik="dsc04264.jpg"/>
+      <obraz plik="dsc04265.jpg"/>
+      <obraz plik="dsc04275.jpg"/>
+      <obraz plik="dsc04282.jpg"/>
+      <obraz plik="dsc04294.jpg"/>
+      <obraz plik="dsc04309.jpg"/>
+      <obraz plik="dsc04313.jpg"/>
+      <obraz plik="dsc04333.jpg"/>
+    </galeria>
+    <galeria nazwa="Promocja Kraków" katalog="promocjaKrakow">
+      <obraz plik="dsc07980_www.jpg"/>
+      <obraz plik="dsc07981_www.jpg"/>
+      <obraz plik="dsc07982_www.jpg"/>
+      <obraz plik="dsc07993_www.jpg"/>
+      <obraz plik="dsc08007_www.jpg"/>
+      <obraz plik="dsc08029_www.jpg"/>
+      <obraz plik="dsc08031_www.jpg"/>
+      <obraz plik="dsc08033_www.jpg"/>
+      <obraz plik="dsc08043_www.jpg"/>
+      <obraz plik="dsc08049_www.jpg"/>
+      <obraz plik="dsc08051_www.jpg"/>
+      <obraz plik="dsc08063_www.jpg"/>
+      <obraz plik="dsc08069_www.jpg"/>
+      <obraz plik="dsc08086-1_www.jpg"/>
+      <obraz plik="dsc08088_www.jpg"/>
+      <obraz plik="dsc08099_www.jpg"/>
+      <obraz plik="dsc08117_www.jpg"/>
+      <obraz plik="dsc08127_www.jpg"/>
+      <obraz plik="dsc08134_www.jpg"/>
+      <obraz plik="dsc08136_www.jpg"/>
+    </galeria>
+    <galeria nazwa="Wianki 2008" katalog="wianki2008">
+      <obraz plik="dsc01231.jpg"/>
+      <obraz plik="dsc01236.jpg"/>
+      <obraz plik="dsc01242.jpg"/>
+      <obraz plik="dsc01246.jpg"/>
+      <obraz plik="dsc01252.jpg"/>
+      <obraz plik="dsc01257.jpg"/>
+      <obraz plik="dsc01261.jpg"/>
+      <obraz plik="dsc01264.jpg"/>
+      <obraz plik="dsc01269.jpg"/>
+      <obraz plik="dsc01271.jpg"/>
+      <obraz plik="dsc01272.jpg"/>
+      <obraz plik="dsc01274.jpg"/>
+      <obraz plik="dsc01276.jpg"/>
+      <obraz plik="dsc01277.jpg"/>
+      <obraz plik="dsc01301.jpg"/>
+      <obraz plik="dsc013021.jpg"/>
+      <obraz plik="dsc013101.jpg"/>
+      <obraz plik="dsc013161.jpg"/>
+      <obraz plik="dsc013201.jpg"/>
+      <obraz plik="dsc01395.jpg"/>
+      <obraz plik="dsc01397.jpg"/>
+      <obraz plik="dsc01402.jpg"/>
+      <obraz plik="dsc01403.jpg"/>
+      <obraz plik="dsc01406.jpg"/>
+      <obraz plik="dsc014131.jpg"/>
+    </galeria>
+  </kategoria>
 </galerie>

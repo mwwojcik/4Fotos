@@ -1,5 +1,4 @@
-target/
-@dodatkowe/
+cache/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
