@@ -258,44 +258,62 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
         long liczbaZdjec =aGalerieWWW.getListaKategorii().stream().flatMap
                 (kat -> kat.getListaGalerii().stream().flatMap(g -> g.getObrazki().stream())).count();
 
-        System.out.println("====================================>>>>>"+liczbaZdjec);
-
         publikujacy.publikujZdarzenie(new ZdarzenieInicjalizacjiPaskaPostepu(this,liczbaZdjec,0,"Przygotowanie galerii WWW",""));
 
         aGalerieWWW.getListaKategorii().forEach(kat -> {
-            Path katCel = zalozKatalog(kat.getSciezka());
-            //todo zapisz do pliku
-            try {
-                List<String> pListaElementow = kat.getListaGalerii().stream().map(k -> przygotujMetryczkeGalerii(k)).collect(Collectors.toList());
-
-                String SZABLON_KATEGORIA_LOKALNY = SZABLON_KATEGORIA.replace(TEMPLATE_TYTUL, kat.getEtykieta());
-                zapiszDoPliku(Paths.get(katCel.toString() + SEP + "index.html"),
-                        pListaElementow, TEMPLATE_KATEGORIA, SZABLON_KATEGORIA_LOKALNY);
-
-            } catch (IOException ex) {
-                throw new IllegalArgumentException(ex);
-            }
+            wygenerujPlikKategorii(kat);
             kat.getListaGalerii().forEach(gal -> {
                 Path cel = zalozKatalog(gal.getSciezka());
-                try {
-                    List<String> pListaElementowZdjec = gal.getObrazki().stream().map(z -> przygotujMetryczkeZdjecia(z.getSciezka())).collect(Collectors.toList());
-                    String SZABLON_GALERIA_LOKALNY = SZABLON_GALERIA.replace(TEMPLATE_TYTUL, gal.getEtykieta());
-                    zapiszDoPliku(Paths.get(cel.toString() + SEP + "index.html"),
-                            pListaElementowZdjec, TEMPLATE_GALERIA, SZABLON_GALERIA_LOKALNY);
-                } catch (IOException ex) {
-                    throw new IllegalArgumentException(ex);
-                }
+                wygenerujPlikGalerii(gal,cel);
                 gal.getObrazki().stream().forEach(zd -> {
-
+                    wygenerujObrazki(zd,cel);
                     publikujacy.publikujZdarzenie(new ZdarzenieInkrementacjiPaskaPostepu(this,liczbaZdjec,inkrement.wartosc++,"Przygotowanie galerii WWW",
                             "Zapisano obrazek=>"+zd.podajNazwe()));
-
-                    ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), cel, WYMIAR_ZDJECIA, KATALOG_ZRODLOWY, null);
-                    ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), cel, WYMIAR_MINIATURA, KATALOG_ZRODLOWY, "-miniatura");
                 });
             });
         });
 
+    }
+
+    private void wygenerujObrazki(Obrazek zd,Path aCel){
+        ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), aCel, WYMIAR_ZDJECIA, KATALOG_ZRODLOWY, null);
+        ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), aCel, WYMIAR_MINIATURA, KATALOG_ZRODLOWY, "-miniatura");
+    }
+
+    /**
+     * Zakłada plik index.html zawierający miniatury galerii.
+     * @param aGaleria
+     * @param aKatalogCel
+     */
+    private void wygenerujPlikGalerii(Galeria aGaleria,Path aKatalogCel){
+        try {
+            List<String> pListaElementowZdjec = aGaleria.getObrazki().stream().map(z -> przygotujMetryczkeZdjecia(z.getSciezka())).collect(Collectors.toList());
+            String SZABLON_GALERIA_LOKALNY = SZABLON_GALERIA.replace(TEMPLATE_TYTUL, aGaleria.getEtykieta());
+            zapiszDoPliku(aKatalogCel.resolve("index.html"),
+                    pListaElementowZdjec, TEMPLATE_GALERIA, SZABLON_GALERIA_LOKALNY);
+        } catch (IOException ex) {
+            throw new IllegalArgumentException(ex);
+        }
+    }
+
+    /**
+     * Metoda zakłada katalog, oraz generuje plik index.html, stanowiący punkt wejścia
+     * do galerii z danej kategorii.
+     * @param aKategoria
+     */
+    private void wygenerujPlikKategorii(KategoriaWWW aKategoria){
+        Path katCel = zalozKatalog(aKategoria.getSciezka());
+        //todo zapisz do pliku
+        try {
+            List<String> pListaElementow = aKategoria.getListaGalerii().stream().map(k -> przygotujMetryczkeGalerii(k)).collect(Collectors.toList());
+
+            String SZABLON_KATEGORIA_LOKALNY = SZABLON_KATEGORIA.replace(TEMPLATE_TYTUL, aKategoria.getEtykieta());
+            zapiszDoPliku(Paths.get(katCel.toString() + SEP + "index.html"),
+                    pListaElementow, TEMPLATE_KATEGORIA, SZABLON_KATEGORIA_LOKALNY);
+
+        } catch (IOException ex) {
+            throw new IllegalArgumentException(ex);
+        }
     }
 
     private void zapiszDoPliku(Path aPlik, List<String> aTekst, String aWzorzec, String aSzablon) throws IOException {
