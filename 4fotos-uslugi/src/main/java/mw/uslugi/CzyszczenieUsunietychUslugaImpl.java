@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
  */
 @Component
 public class CzyszczenieUsunietychUslugaImpl extends UslugaBazowa implements CzyszczenieUsunietychUsluga {
-    private String SEP = KonfiguratorAplikacji.separator();
+    //private String SEP = KonfiguratorAplikacji.separator();
     private String KATALOG_ROOT_USUNIETYCH_SCIEZKA = null;
 
 
@@ -48,7 +48,7 @@ public class CzyszczenieUsunietychUslugaImpl extends UslugaBazowa implements Czy
         }
 
         aWybraneKatalogi.stream().forEach(kat->{
-            Path pKosz= Paths.get(kat+SEP+pNazwaKatUsunie);
+            Path pKosz= kat.resolve(pNazwaKatUsunie);
             if(!Files.exists(pKosz)){
                 return;
             }
@@ -56,13 +56,13 @@ public class CzyszczenieUsunietychUslugaImpl extends UslugaBazowa implements Czy
             try {
                 List<Path> pListaPlikow=Files.list(pKosz).collect(Collectors.toList());
 
-                Path cel=Paths.get(KATALOG_ROOT_USUNIETYCH+SEP+kat.toFile().getName());
+                Path cel=KATALOG_ROOT_USUNIETYCH.resolve(kat.getFileName());
                 if(!Files.exists(cel)){
                     Files.createDirectory(cel);
                 }
 
                 pListaPlikow.stream().forEach(p->{
-                    Path pDocelowy=Paths.get(cel+SEP+p.toFile().getName());
+                    Path pDocelowy=cel.resolve(p.getFileName());
                     try {
                         ZarzadcaLogowania.podajInstancje().logujKomunikat("Usunięto=>"+p);
                         Files.move(p,pDocelowy);
