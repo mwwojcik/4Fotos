@@ -308,7 +308,7 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
             List<String> pListaElementow = aKategoria.getListaGalerii().stream().map(k -> przygotujMetryczkeGalerii(k)).collect(Collectors.toList());
 
             String SZABLON_KATEGORIA_LOKALNY = SZABLON_KATEGORIA.replace(TEMPLATE_TYTUL, aKategoria.getEtykieta());
-            zapiszDoPliku(Paths.get(katCel.toString() + SEP + "index.html"),
+            zapiszDoPliku(katCel.resolve("index.html"),
                     pListaElementow, TEMPLATE_KATEGORIA, SZABLON_KATEGORIA_LOKALNY);
 
         } catch (IOException ex) {
@@ -332,16 +332,32 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
     }
 
     private Path zalozKatalog(Path aKatalogZrodlowy) {
-        File pPlik = new File(aKatalogZrodlowy.toFile().getAbsolutePath().replace(KATALOG_ZRODLOWY, KATALOG_DOCELOWY));
-        Path pKat = pPlik.toPath();
+        Path pKat = podajKatalogDocelowy(aKatalogZrodlowy);
         try {
             if (Files.notExists(pKat)) {
-                Files.createDirectory(pKat);
+                Files.createDirectories(pKat);
             }
         } catch (IOException e) {
             throw new IllegalArgumentException(e);
         }
         return pKat;
+    }
+
+
+    private Path podajKatalogDocelowy(Path aKatalogZrodlowy){
+
+        Path pKATALOG_ZRODLOWY=Paths.get(KATALOG_ZRODLOWY);
+        Path pKatalogWyjsciowy=Paths.get(KATALOG_DOCELOWY);
+
+
+        for(int i=0;i<aKatalogZrodlowy.getNameCount();i++){
+           //wybieram poziomy zaglebienia ponizej katalogu zrodlowego
+            if((i<pKATALOG_ZRODLOWY.getNameCount())&&(aKatalogZrodlowy.getName(i).equals(pKATALOG_ZRODLOWY.getName(i)))){
+               continue;
+           }
+           pKatalogWyjsciowy=pKatalogWyjsciowy.resolve(aKatalogZrodlowy.getName(i));
+        }
+        return pKatalogWyjsciowy;
     }
 
 

@@ -57,7 +57,7 @@ public class MainFx extends Application {
         primaryStage.setTitle("4Fotos");
         primaryStage.setScene(scene);
 
-        // primaryStage.setAlwaysOnTop(true);
+        primaryStage.setAlwaysOnTop(false);
        // primaryStage.toFront();
         primaryStage.show();
 
