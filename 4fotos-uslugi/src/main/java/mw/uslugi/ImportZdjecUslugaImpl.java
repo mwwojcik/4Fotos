@@ -37,9 +37,6 @@ public class ImportZdjecUslugaImpl extends UslugaBazowa implements ImportZdjecUs
     private Path katalogBazowy = null;
     private Path katalogAparatu = null;
 
-
-    String SEP= KonfiguratorAplikacji.separator();
-
     class Katalog{
         Path root;
         Path jpg;

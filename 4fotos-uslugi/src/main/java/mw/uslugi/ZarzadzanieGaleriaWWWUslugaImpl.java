@@ -44,16 +44,15 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
 
     private String KATALOG_DOCELOWY = null;
 
-    private String SEP = KonfiguratorAplikacji.separator();
 
     @PostConstruct
     private void init(){
         KATALOG_ZRODLOWY = konfiguratorAplikacji.getGaleria().getZrodlo();
         KATALOG_DOCELOWY = konfiguratorAplikacji.getGaleria().getCel();
 
-        Path pPlikSzablonuGaleria = Paths.get(konfiguratorAplikacji.getKatalogAplikacji() + SEP + "szablony" + SEP + "galeria.html");
+        Path pPlikSzablonuGaleria = Paths.get(konfiguratorAplikacji.getKatalogAplikacji()).resolve("szablony").resolve("galeria.html");
 
-        Path pPlikSzablonuKategoria = Paths.get(konfiguratorAplikacji.getKatalogAplikacji()+ SEP + "szablony" + SEP + "kategoria.html");
+        Path pPlikSzablonuKategoria = Paths.get(konfiguratorAplikacji.getKatalogAplikacji()).resolve("szablony" ).resolve("kategoria.html");
 
         try {
             SZABLON_KATEGORIA = new String(Files.readAllBytes(pPlikSzablonuKategoria));
@@ -207,15 +206,15 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
 
             Path root = Paths.get(KATALOG_ZRODLOWY);
 
-            File pGaleriaPlik = new File(konfiguratorAplikacji.getKatalogAplikacji() + SEP + "galerie.xml");
+            Path pGaleriaPlik = Paths.get(konfiguratorAplikacji.getKatalogAplikacji()).resolve("galerie.xml");
 
-            URL pURL = pGaleriaPlik.toURL();
+            URL pURL = pGaleriaPlik.toUri().toURL();
 
             GalerieWWW pGalerie = stanGaleriiWWW.podajGalerieWWW(DokumentXMLHelper.instancja().podajDokument(pURL));
 
             Document pDok = DokumentXMLHelper.instancja().podajDokument(pGalerie);
 
-            DokumentXMLHelper.instancja().zapiszDoPliku(pGaleriaPlik.toPath(), pDok);
+            DokumentXMLHelper.instancja().zapiszDoPliku(pGaleriaPlik, pDok);
 
 
         } catch (IOException e) {
