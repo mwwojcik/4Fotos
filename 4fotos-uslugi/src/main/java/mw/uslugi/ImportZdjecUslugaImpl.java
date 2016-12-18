@@ -65,7 +65,7 @@ public class ImportZdjecUslugaImpl extends UslugaBazowa implements ImportZdjecUs
 
         Date myDate=new Date();
         SimpleDateFormat pFormat=new SimpleDateFormat("yyyy-MM-dd");
-        String pNazwaKataloguDocelowego=katalogBazowy.toFile().getAbsolutePath()+SEP+pFormat.format(myDate);//String.format('%tF', myDate);
+        String pNazwaKataloguDocelowego=katalogBazowy.resolve(pFormat.format(myDate)).toString();//String.format('%tF', myDate);
 
         if(postfix!=null){
             pNazwaKataloguDocelowego+="-"+postfix;
@@ -98,7 +98,7 @@ public class ImportZdjecUslugaImpl extends UslugaBazowa implements ImportZdjecUs
     }
 
     private Path utworzPodkatalog(Path aBaza,String aNazwa)throws IOException{
-        return Files.createDirectory(Paths.get(aBaza.toFile().getAbsolutePath()+SEP+aNazwa));
+        return Files.createDirectory(aBaza.resolve(aNazwa));
     }
 
 
