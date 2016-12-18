@@ -91,7 +91,7 @@ public class ImportZdjecUslugaImpl extends UslugaBazowa implements ImportZdjecUs
             throw new IllegalArgumentException(e);
         }
 
-        ZarzadcaLogowania.podajInstancje().logujKomunikat(">>>>Utworzono katalog:"+pUtworzonyKatalog.toFile().getAbsolutePath()+"<<<<<");
+        ZarzadcaLogowania.podajInstancje().logujKomunikat(">>>>Utworzono katalog:"+pUtworzonyKatalog.toString()+"<<<<<");
 
         return pWynik;
 
