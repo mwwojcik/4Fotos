@@ -30,7 +30,7 @@ import java.util.stream.Stream;
  */
 @Component
 public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements SegregacjaZdjecUsluga {
-    private String SEP = KonfiguratorAplikacji.separator();
+    //private String SEP = KonfiguratorAplikacji.separator();
 
     private Path KATALOG_GLOWNY_CACHE = null;
 
@@ -38,7 +38,7 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
 
     @PostConstruct
     private void init(){
-        KATALOG_GLOWNY_CACHE = Paths.get(konfiguratorAplikacji.getKatalogAplikacji() + SEP + konfiguratorAplikacji.getObszarRoboczy().getCache());
+        KATALOG_GLOWNY_CACHE = Paths.get(konfiguratorAplikacji.getKatalogAplikacji()).resolve( konfiguratorAplikacji.getObszarRoboczy().getCache());
     }
 
     class Licznik {
@@ -48,7 +48,7 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
 
 
     public boolean czyMiniaturyPrzygotowane(String aRootGaleriiWejsciowej){
-        Path cel = Paths.get(KATALOG_GLOWNY_CACHE.toFile().getAbsolutePath() + SEP + aRootGaleriiWejsciowej);
+        Path cel = KATALOG_GLOWNY_CACHE.resolve(aRootGaleriiWejsciowej);
         return Files.exists(cel);
     }
 
@@ -58,11 +58,12 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
             if (!KATALOG_GLOWNY_CACHE.toFile().exists()) {
                 Files.createDirectory(KATALOG_GLOWNY_CACHE);
             }
-            Path pGaleriaWejsciowa = Paths.get(aRootGaleriiWejsciowej.getSciezka().toFile().getAbsolutePath() + SEP + konfiguratorAplikacji.getPodkatalog().getJpg());
+            Path pGaleriaWejsciowa = aRootGaleriiWejsciowej.getSciezka().resolve(konfiguratorAplikacji.getPodkatalog().getJpg());
+
             List<Obrazek> pListaObrazkowOryginalnych = podajObrazkiZkatalogu(pGaleriaWejsciowa);
 
 
-            Path cel = Paths.get(KATALOG_GLOWNY_CACHE.toFile().getAbsolutePath() + SEP + aRootGaleriiWejsciowej.podajNazwe());
+            Path cel = KATALOG_GLOWNY_CACHE.resolve(aRootGaleriiWejsciowej.podajNazwe());
             Map<String, Double> pObrazkiXml = podajOceny(aRootGaleriiWejsciowej, cel);
 
             if (!cel.toFile().exists()) {
@@ -98,11 +99,11 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
             if (!KATALOG_GLOWNY_CACHE.toFile().exists()) {
                 Files.createDirectory(KATALOG_GLOWNY_CACHE);
             }
-            Path pGaleriaWejsciowa = Paths.get(aRootGaleriiWejsciowej.getSciezka().toFile().getAbsolutePath() + SEP + konfiguratorAplikacji.getPodkatalog().getJpg());
+            Path pGaleriaWejsciowa = aRootGaleriiWejsciowej.getSciezka().resolve(konfiguratorAplikacji.getPodkatalog().getJpg());
             List<Obrazek> pListaObrazkowOryginalnych = podajObrazkiZkatalogu(pGaleriaWejsciowa);
 
 
-            Path cel = Paths.get(KATALOG_GLOWNY_CACHE.toFile().getAbsolutePath() + SEP + aRootGaleriiWejsciowej.podajNazwe());
+            Path cel =KATALOG_GLOWNY_CACHE.resolve(aRootGaleriiWejsciowej.podajNazwe());
             Map<String, Double> pObrazkiXml = podajOceny(aRootGaleriiWejsciowej, cel);
 
             if (!cel.toFile().exists()) {
@@ -129,7 +130,8 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
 
 
     private Map<String, Double> podajOceny(Galeria aGaleria, Path aKatalogPlikuOcen) {
-        Path pPlikOcen = Paths.get(aKatalogPlikuOcen + SEP + Galeria.PLIK_OCEN);
+        Path pPlikOcen = aKatalogPlikuOcen.resolve(
+                Galeria.PLIK_OCEN);
         if (Files.exists(pPlikOcen)) {
             try {
                 Document pOceny = DokumentXMLHelper.instancja().podajDokument(pPlikOcen.toFile().toURL());
@@ -144,15 +146,15 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
 
     @Override
     public void zapiszOceny(Galeria aGaleria) {
-        Path cel = Paths.get(KATALOG_GLOWNY_CACHE.toFile().getAbsolutePath() + SEP + aGaleria.podajNazwe());
+        Path cel = KATALOG_GLOWNY_CACHE.resolve(aGaleria.podajNazwe());
         Document pDok = DokumentXMLHelper.instancja().podajDokumentOcen(aGaleria);
-        DokumentXMLHelper.instancja().zapiszDoPliku(Paths.get(cel + SEP + Galeria.PLIK_OCEN), pDok);
+        DokumentXMLHelper.instancja().zapiszDoPliku(cel.resolve(Galeria.PLIK_OCEN), pDok);
     }
 
     @Override
     public void przenosWybraneDoUsuniecia(Galeria aGaleria) {
         String katUsNazwa = konfiguratorAplikacji.getPodkatalog().getDousuniecia();
-        Path podkatalogUs = Paths.get(aGaleria.getSciezka() + SEP + katUsNazwa);
+        Path podkatalogUs = aGaleria.getSciezka().resolve(katUsNazwa);
 
         try {
             if (!Files.exists(podkatalogUs)) {
