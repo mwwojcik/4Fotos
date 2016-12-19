@@ -33,8 +33,8 @@ public class ZarzadcaStanuGaleriiWWW {
     @Autowired
     protected KonfiguratorAplikacji konfiguratorAplikacji;
 
-    private String KATALOG_ZRODLOWY = null;
-    private String SEP = KonfiguratorAplikacji.separator();
+    private Path KATALOG_ZRODLOWY = null;
+
 
     private String XML_ATRYBUT_NAZWA = "nazwa";
     private String XML_ATRYBUT_KATALOG = "katalog";
@@ -48,16 +48,16 @@ public class ZarzadcaStanuGaleriiWWW {
 
     @PostConstruct
     private void init(){
-        KATALOG_ZRODLOWY = konfiguratorAplikacji.getGaleria().getZrodlo();
+        KATALOG_ZRODLOWY = Paths.get(konfiguratorAplikacji.getGaleria().getZrodlo());
     }
 
 
     public GalerieWWW podajGalerieWWW() {
-        Path root = Paths.get(KATALOG_ZRODLOWY);
+        Path root = KATALOG_ZRODLOWY;
 
         URL pURL = null;
         try {
-            pURL = (new File(konfiguratorAplikacji.getKatalogAplikacji()+ SEP + "galerie.xml")).toURL();
+            pURL = Paths.get(konfiguratorAplikacji.getKatalogAplikacji()).resolve("galerie.xml").toUri().toURL();
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException(e);
         }
@@ -123,12 +123,12 @@ public class ZarzadcaStanuGaleriiWWW {
 
     private KategoriaWWW stworzObiektKategoriiWWW(Element katElemXml) {
         KategoriaWWW pKat = new KategoriaWWW(katElemXml.attributeValue(XML_ATRYBUT_NAZWA),
-                Paths.get(KATALOG_ZRODLOWY + SEP + katElemXml.attributeValue(XML_ATRYBUT_KATALOG)));
+                KATALOG_ZRODLOWY.resolve(katElemXml.attributeValue(XML_ATRYBUT_KATALOG)));
         return pKat;
     }
 
     private Galeria stworzObiektGaleriiWWW(Element galElemXml, Path aKatalogKategorii) {
-        Galeria pGaleria = new Galeria(galElemXml.attributeValue(XML_ATRYBUT_NAZWA), Paths.get(aKatalogKategorii.toString() + SEP + galElemXml.attributeValue(XML_ATRYBUT_KATALOG)));
+        Galeria pGaleria = new Galeria(galElemXml.attributeValue(XML_ATRYBUT_NAZWA), aKatalogKategorii.resolve(galElemXml.attributeValue(XML_ATRYBUT_KATALOG)));
         return pGaleria;
     }
 

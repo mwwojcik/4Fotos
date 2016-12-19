@@ -16,7 +16,7 @@ import java.nio.file.Path;
 public class Zasob {
     private String etykieta;
     private Path sciezka;
-    private String SEP = KonfiguratorAplikacji.separator();
+
 
     public Zasob(String etykieta, Path aSciezka) {
         this.etykieta = etykieta;

@@ -55,12 +55,5 @@ public class KonfiguratorAplikacji {
         private String cel;
     }
 
-    public static String separator(){
-        String sep=System.getProperty("file.separator");
-        if(sep.equals("\\")){
-            return "\\\\";
-        }
-        return sep;
-    }
 
 }
