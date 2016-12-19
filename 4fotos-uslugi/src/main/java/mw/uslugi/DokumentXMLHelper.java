@@ -28,7 +28,7 @@ public class DokumentXMLHelper {
     private String XML_ATRYBUT_KATALOG = "katalog";
     private String XML_ATRYBUT_PLIK = "plik";
     private String XML_ATRYBUT_OCENA = "ocena";
-    private String SEP = KonfiguratorAplikacji.separator();
+    //private String SEP = KonfiguratorAplikacji.separator();
 
 
     public Document podajDokument(URL url) {
@@ -111,7 +111,7 @@ public class DokumentXMLHelper {
                 if(pOcAttr!=null){
                     pOcena=pOcAttr.getValue();
                 }
-                Path p = Paths.get(aGaleria.getSciezka().toFile().getAbsolutePath() + SEP + pNazwa);
+                Path p = aGaleria.getSciezka().resolve(pNazwa);
                 Obrazek pObrazek = new Obrazek(pNazwa, p);
                 if (pOcena != null&&!pOcena.isEmpty()) {
                     pObrazek.setOcena(Double.valueOf(pOcena));

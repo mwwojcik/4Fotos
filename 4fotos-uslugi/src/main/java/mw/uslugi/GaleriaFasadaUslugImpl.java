@@ -39,7 +39,7 @@ public class GaleriaFasadaUslugImpl extends UslugaBazowa implements GaleriaFasad
     @Autowired
     private KopiaZapasowaUsluga kopiaZapasowaUsluga;
 
-    private String SEP = KonfiguratorAplikacji.separator();
+    //private String SEP = KonfiguratorAplikacji.separator();
 
     private String RAW_KATALOG = null;
 

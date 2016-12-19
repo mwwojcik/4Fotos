@@ -16,10 +16,6 @@ import java.util.Set;
 @Component
 public class KopiaZapasowaUslugaImpl implements KopiaZapasowaUsluga {
 
-    private String SEP = KonfiguratorAplikacji.separator();
-
-
-
 
     private boolean czyJestTypu(String aNazwa, String[] aRozszerzenia) {
         for (String pRoz : aRozszerzenia) {

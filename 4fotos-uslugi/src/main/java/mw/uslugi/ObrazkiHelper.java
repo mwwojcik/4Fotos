@@ -20,7 +20,7 @@ import java.nio.file.Paths;
  */
 public class ObrazkiHelper {
 
-    private static String SEP = KonfiguratorAplikacji.separator();
+    //private static String SEP = KonfiguratorAplikacji.separator();
 
     public static boolean czyJestWykluczony(Path aSciezka){
         String[] wykluczenia={"txt","jalbum"};
@@ -60,8 +60,7 @@ public class ObrazkiHelper {
 
             }
 
-            String pSciezkaDocelowa = aKatalogDocelowy + SEP + pNazwaPliku;
-            Path pPlikDocelowy = Paths.get(pSciezkaDocelowa);
+            Path pPlikDocelowy = aKatalogDocelowy.resolve(pNazwaPliku);
 
             Files.deleteIfExists(pPlikDocelowy);
             ImageIO.write(pObrazekWyskalowany, "jpg", pPlikDocelowy.toFile());
