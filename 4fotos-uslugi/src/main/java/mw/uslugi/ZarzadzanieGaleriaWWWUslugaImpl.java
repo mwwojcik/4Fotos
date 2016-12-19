@@ -275,8 +275,8 @@ public class ZarzadzanieGaleriaWWWUslugaImpl implements ZarzadzanieGaleriaWWWUsl
     }
 
     private void wygenerujObrazki(Obrazek zd,Path aCel){
-        ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), aCel, WYMIAR_ZDJECIA, KATALOG_ZRODLOWY, null);
-        ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), aCel, WYMIAR_MINIATURA, KATALOG_ZRODLOWY, "-miniatura");
+        ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), aCel, WYMIAR_ZDJECIA, null);
+        ObrazkiHelper.przeskalujObrazek(zd.getSciezka(), aCel, WYMIAR_MINIATURA, "-miniatura");
     }
 
     /**

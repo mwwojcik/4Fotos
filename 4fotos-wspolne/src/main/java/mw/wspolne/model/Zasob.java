@@ -27,9 +27,6 @@ public class Zasob {
         this.sciezka = sciezka;
     }
 
-    public String podajSciezkeRoot(){
-        return sciezka.subpath(0,sciezka.getNameCount()-1).toString();
-    }
 
     public String podajNazwe(){
         return sciezka.getFileName().toString();

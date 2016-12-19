@@ -76,7 +76,7 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
                     //  MonitorPaskaPostepu.podajInstancje().aktualizujStan(pLicznik.licznik++);
                     getPublikujacy().publikujZdarzenie(new ZdarzenieInkrementacjiPaskaPostepu(this,pListaObrazkowOryginalnych.size(),pLicznik.licznik++,"Przygotowanie podglądu",o.getSciezka().getFileName().toString()));
 
-                    o.setMiniatura(new Obrazek(ObrazkiHelper.przeskalujObrazek(o.getSciezka(), cel, WIELKOSC_OBRAZKA, aRootGaleriiWejsciowej.podajSciezkeRoot(), null)));
+                    o.setMiniatura(new Obrazek(ObrazkiHelper.przeskalujObrazek(o.getSciezka(), cel, WIELKOSC_OBRAZKA,null)));
                     if (pObrazkiXml != null && pObrazkiXml.containsKey(o.podajNazwe())) {
                         o.setOcena(Double.valueOf(pObrazkiXml.get(o.podajNazwe())));
                         o.getMiniatura().setOcena(Double.valueOf(pObrazkiXml.get(o.podajNazwe())));

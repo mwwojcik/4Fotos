@@ -44,7 +44,7 @@ public class ObrazkiHelper {
         return false;
     }
 
-    public static Path przeskalujObrazek(Path aPlik, Path aKatalogDocelowy, int aRozmiarDocelowy,String KATALOG_ZRODLOWY_BAZA,String aPostfixNazwy) {
+    public static Path przeskalujObrazek(Path aPlik, Path aKatalogDocelowy, int aRozmiarDocelowy,String aPostfixNazwy) {
 
 
         try {
