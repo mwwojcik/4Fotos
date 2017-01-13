@@ -62,6 +62,10 @@ public class GaleriaAplikacjaGlownaKontroler extends KontrolerBazowyImpl{
 
     GalerieWWW galerie;
 
+    private String login;
+
+    private String haslo;
+
     @FXML
     public void initialize() {
         System.out.println("stworzono" + this.getClass().getSimpleName());
@@ -128,14 +132,22 @@ public class GaleriaAplikacjaGlownaKontroler extends KontrolerBazowyImpl{
         LoginDialog pDialog=new LoginDialog(new Pair<>(LOGIN, ""), new Callback<Pair<String, String>, Void>() {
             @Override
             public Void call(Pair<String, String> param) {
-                publikacjaGaleriiWWWUsluga.publikujGalerie(galerie,HOST,HOSTURI,param.getKey(),param.getValue(),TypPublikacjiEnum.WSZYSTKO);
+                login=param.getKey();
+                haslo=param.getValue();
+                uruchomZadanieAsynchroniczne(()->publikujGalerie());
                 return null;
             }
         });
         pDialog.setHeaderText("Host:"+HOST+"\n"+"URI:"+HOSTURI);
         pDialog.showAndWait();
+
+
     }
 
+    private Boolean publikujGalerie(){
+        publikacjaGaleriiWWWUsluga.publikujGalerie(galerie,HOST,HOSTURI,login,haslo,TypPublikacjiEnum.WSZYSTKO);
+        return true;
+    }
 
 
     public void zaczytajPlikAkcjaKlik(){
