@@ -191,6 +191,13 @@ public class SegregacjaZdjecUslugaImpl extends UslugaBazowa implements Segregacj
                 pZnalezione.forEach(p -> {
                     Path cel = podkatalogUs.resolve(p.getFileName());
 
+                    int iter=1;
+
+                    while(Files.exists(cel)){
+                        cel= podkatalogUs.resolve(iter+p.getFileName().toString());
+                        iter++;
+                    }
+
                     ZarzadcaLogowania.podajInstancje().logujKomunikat("Przenosze zrodlo=>" + p.toString() + " cel=>" + cel.toString());
                     try {
                         Files.move(p,cel);

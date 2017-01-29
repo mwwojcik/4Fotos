@@ -185,7 +185,8 @@ public class SegregacjaZdjecKontroler extends KontrolerBazowyImpl<ZasobyGlownePa
     }
 
     private List<SmallGalleryImageWithRating> konwertujObrazkiNaGalerie(List<Obrazek> aObrazki){
-        return aObrazki.stream().map(i->new SmallGalleryImageWithRating(i,this)).collect(Collectors.toList());
+        List<SmallGalleryImageWithRating> pLista=aObrazki.stream().map(i->new SmallGalleryImageWithRating(i,this)).collect(Collectors.toList());
+        return pLista;
     }
 
     /***********************************
